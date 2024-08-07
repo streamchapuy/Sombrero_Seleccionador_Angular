@@ -1,0 +1,30 @@
+body {
+    background-image: url('../../../assets/Img/Background/Inicio_Background.jpg');
+    background-size: cover;
+    background-position: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inicio {
+    width: fit-content;
+    height: 880px;
+    backdrop-filter: blur(4px);
+    background-color: rgb(100, 100, 100, 0.2);
+}
+
+@font-face {
+    font-family: HarryPotter;
+    src: url('../../../assets/Font/HARRYP__.TTF');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.HarryFont {
+    font-family: HarryPotter;
+    font-size: 56px;
+    color: #ffe100;
+}
+
