@@ -1,12 +1,22 @@
+@media (min-width: 1280px) {
+    #sombrero {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+       z-index: 1;
+    }
+}
+
+
 
 #sombrero {
    position: absolute;
-   top: -15px;
-   right: 320px;
-   z-index: 1;
+   top: -2vh;
+   right: 550px;
+  z-index: 1;
 }
 
-.ruleta-container {       
+.ruleta-container {         
     position: relative;
     width: 400px;
     height: 400px;
