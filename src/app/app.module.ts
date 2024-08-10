@@ -7,6 +7,7 @@ import { InicioComponent } from './Pages/inicio/inicio.component';
 import { SorteoComponent } from './Pages/sorteo/sorteo.component';
 import { RuletaComponent } from './Components/ruleta/ruleta.component';
 import { SombreroComponent } from './Components/sombrero/sombrero.component';
+import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SombreroComponent } from './Components/sombrero/sombrero.component';
     InicioComponent,
     SorteoComponent,
     RuletaComponent,
-    SombreroComponent
+    SombreroComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
