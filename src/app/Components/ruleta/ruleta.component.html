@@ -1,21 +1,28 @@
 <div class="Conteiner">
     <app-sombrero id="sombrero"></app-sombrero>
-    <div class="ruleta-container">
-        <div class="ruleta">
-           
+    <div class="ruleta-container"
+    
+    >
+        <div class="ruleta" (click)="spinRuleta()"
+        [style.transform]="transformStyle" [style.transition]="transitionStyle"
+        >           
             <div class="seccion">
-                <img id="img-4" src ="../../../assets/Img/Casas/Ravenclaw Png.png" alt="">
+                <img id="img-4" src ="../../../assets/Img/Casas/Ravenclaw Png.png" alt="Ravenclaw">
             </div>
             <div class="seccion">
-                <img id="img-3" src="../../../assets/Img/Casas/Slytherin-png.png" alt="">
+                <img id="img-3" src="../../../assets/Img/Casas/Slytherin-png.png" alt="Slytherin">
             </div>
             <div class="seccion">
-                <img id="img-2" src="../../../assets/Img/Casas/HafflePuff.png" alt="">
+                <img id="img-2" src="../../../assets/Img/Casas/HafflePuff.png" alt="HafflePuff">
             </div>
             <div class="seccion">
-                <img id="img-1" src="../../../assets/Img/Casas/IA-1.png" alt="">
+                <img id="img-1" src="../../../assets/Img/Casas/IA-1.png" alt="Griffindor">
             </div>
             
         </div>
+        <div class="circle-with-arrow">
+            <div class="arrow"></div>
+          </div>
+        </div>
     </div>
-</div>
+
