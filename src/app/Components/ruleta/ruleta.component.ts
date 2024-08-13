@@ -9,23 +9,26 @@ export class RuletaComponent {
   transformStyle = 'rotate(0deg)';
   transitionStyle = '';
   isSpinning = false;
+  anguloActual = 0;
 
   spinRuleta() {
-    if (this.isSpinning) {
-      // Si ya está girando, detener el giro lentamente
-      this.slowDownRuleta();
+    if (!!this.isSpinning) {
+      this.startRuleta();      
     } else {
-      // Si no está girando, iniciar el giro
-      this.startRuleta();
+      this.slowDownRuleta();
+      
     }
   }
 
   startRuleta() {
     this.isSpinning = true;
-    const giros = Math.floor(Math.random() * 3) + 10;  
+    const giros = Math.floor(Math.random() * 3) + 6;  
     const anguloFinal = Math.floor(Math.random() * 360);
     const tiempoGiro = 8;  
     const rotacionTotal = giros * 360 + anguloFinal;
+
+    this.anguloActual += rotacionTotal;
+
 
     this.transitionStyle = `transform ${tiempoGiro}s cubic-bezier(0.33, 1, 0.68, 1)`;
     this.transformStyle = `rotate(${rotacionTotal}deg)`;

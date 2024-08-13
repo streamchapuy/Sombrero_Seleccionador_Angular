@@ -3,7 +3,7 @@
     <div class="ruleta-container"
     
     >
-        <div class="ruleta" (click)="spinRuleta()"
+        <div class="ruleta"
         [style.transform]="transformStyle" [style.transition]="transitionStyle"
         >           
             <div class="seccion">
@@ -20,7 +20,10 @@
             </div>
             
         </div>
-        <div class="circle-with-arrow">
+        <div class="circle-with-arrow"
+        (click)="spinRuleta()"
+        >
+          <div class="circle">
             <div class="arrow"></div>
           </div>
         </div>
