@@ -1,4 +1,11 @@
-body {
+@media (min-width: 1280px) {
+    .componente {
+        grid-template-columns: 0.3fr 2fr 2fr 0.3fr;
+        grid-template-rows: 0.3fr 2.5fr 0.3fr;
+    }
+}
+
+.componente {
     background-image: url('../../../assets/Img/Background/Inicio_Background.jpg');
     background-size: cover;
     background-position: 100%;
@@ -6,13 +13,24 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 99dvh;
+    cursor: url('../../../assets/LaVaritaDeHarry/VaritaCursorRight.png') 0 0 ,auto;
 }
 
-.inicio {
-    width: fit-content;
-    height: 880px;
+.Blur {
+    width: 50%;
+    height: 100%;
     backdrop-filter: blur(4px);
     background-color: rgb(100, 100, 100, 0.2);
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.EscudoInicio{
+    width: 50%;
+    height: 80%;
 }
 
 @font-face {
@@ -24,7 +42,28 @@ body {
 
 .HarryFont {
     font-family: HarryPotter;
-    font-size: 56px;
-    color: #ffe100;
+    font-size: 156px;
+    color: #d79a00;
+    margin-right:100px;  
+    margin-left: 100px;
 }
 
+#IniciarSorteo {
+    background-color: #d79a00;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 126px;
+    margin: 4px 2px;
+    cursor: url('../../../assets/LaVaritaDeHarry/VaritaCursorLeft.png') 0 0 ,auto;
+    border-radius: 65px;
+}
+#IniciarSorteo:hover{
+    background-color: #f6cd00;
+}
+.ContenedorBoton {
+    display: grid;
+    place-items: center;
+}
