@@ -11,19 +11,22 @@ export class RuletaComponent {
   isSpinning = false;
   tiempoGiro = 5;
   anguloActual = 0;
+  showBubble = false;
+
+  casas: string[] = ['Ravenclaw', 'Slytherin', 'Gryffindor', 'Hufflepuff'];
+  casaSeleccionada: string = 'mmmmm...';
 
   spinRuleta() {
     if (this.isSpinning) {
       return;
     }
-
     console.log('Ruleta girando');
     this.isSpinning = true;
+    this.showBubble = true;
 
     const girosCompletos = 5;
     const anguloFinal = Math.floor(Math.random() * 360);
     const rotacionTotal = girosCompletos * 360 + anguloFinal;
-
 
     this.anguloActual += rotacionTotal;
 
@@ -32,6 +35,24 @@ export class RuletaComponent {
 
     setTimeout(() => {
       this.isSpinning = false; 
+      this.calcularCasa(this.anguloActual);
+      console.log(`Casa seleccionada: ${this.casaSeleccionada}`);
+      this.showBubble = false;
     }, this.tiempoGiro * 1000); 
+  }
+
+  calcularCasa(angulo: number) {
+    const anguloNormalizado = angulo % 360; // Asegúrate de que el ángulo esté entre 0 y 360
+
+    // Ajusta el rango según el orden y la distribución de las casas en la ruleta
+    if (anguloNormalizado >= 0 && anguloNormalizado < 90) {
+      this.casaSeleccionada = 'Gryffindor'; // Imagen en la posición 0-90 grados
+    } else if (anguloNormalizado >= 90 && anguloNormalizado < 180) {
+      this.casaSeleccionada = 'Hufflepuff'; // Imagen en la posición 90-180 grados
+    } else if (anguloNormalizado >= 180 && anguloNormalizado < 270) {
+      this.casaSeleccionada = 'Slytherin'; // Imagen en la posición 180-270 grados
+    } else {
+      this.casaSeleccionada = 'Ravenclaw'; // Imagen en la posición 270-360 grados
+    }
   }
 }
