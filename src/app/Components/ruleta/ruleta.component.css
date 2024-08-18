@@ -9,7 +9,7 @@
 
 #sombrero {
     position: absolute;
-    top: 30px;
+    top: 0;
     left: 49%;
     transform: translateX(-50%);
     z-index: 10;
@@ -154,7 +154,7 @@ img {
 .buuble {
     position: absolute;
     top: 30px;
-    right: 17%;
+    right: 12%;
     transform: translateX(-50%);
     font-family: sans-serif;
     font-size: 18px;
@@ -174,13 +174,10 @@ img {
 
 .buuble.show {  
     display: block;
-    /* Mostrar cuando esté girando */
+    
 }
 
-/* .buuble.show::after {
-    content: '...';
-    animation: puntos 1.5s infinite;
-} */
+
 
 
 .buuble-botton-left::before {
@@ -192,7 +189,7 @@ img {
     border-right: 12px solid transparent;
     border-top: 12px solid #fff;
     border-bottom: 23px solid transparent;
-    left: 32px;
+    left: 10px;
     bottom: -24px;
 }
 
