@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrl: './sorteo.component.css'
 })
 export class SorteoComponent {
+  selectedTeam: string | null = null;
+  selectedHouse: string | null = null;
 
+  onteamSelected(team: string) {
+    this.selectedTeam = team;
+  }
+  onHouseSelected(house: string) {
+    this.selectedHouse = house;
+    this.assingnTeamtoHouse();
+  }
+
+  assingnTeamtoHouse() {
+    if (this.selectedTeam && this.selectedHouse) {
+      console.log(`El equipo ${this.selectedTeam} ha sido asignado a ${this.selectedHouse}`);
+    }
+  }
 }

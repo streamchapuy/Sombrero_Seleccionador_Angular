@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-nav-bar',
@@ -9,6 +9,19 @@ export class NavBarComponent {
   isDragging = false;
   startX: number = 0;
   scrollLeft: number = 0;
+
+
+  @Output() teamSelected = new EventEmitter<string>();
+
+  teams = ['equipo1', 'equipo2', 'equipo3',
+           'equipo4', 'equipo5', 'equipo6',
+           'equipo7', 'equipo8', 'equipo9', 
+           'equipo10','equipo11', 'equipo12'];
+
+  selectTeam(team: string) {
+    this.teamSelected.emit(team);
+  }
+
 
   startDrag(event: MouseEvent) {
     this.isDragging = true;

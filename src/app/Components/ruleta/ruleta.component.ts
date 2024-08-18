@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-ruleta',
@@ -12,6 +12,10 @@ export class RuletaComponent {
   tiempoGiro = 5;
   anguloActual = 0;
   showBubble = false;
+
+  @Output() houseSelected = new EventEmitter<string>();
+
+
 
   casas: string[] = ['Ravenclaw', 'Slytherin', 'Gryffindor', 'Hufflepuff'];
   casaSeleccionada: string = 'mmmmm...';
@@ -38,6 +42,7 @@ export class RuletaComponent {
       this.calcularCasa(this.anguloActual);
       console.log(`Casa seleccionada: ${this.casaSeleccionada}`);
       this.showBubble = false;
+      this.houseSelected.emit(this.casaSeleccionada);
     }, this.tiempoGiro * 1000); 
   }
 

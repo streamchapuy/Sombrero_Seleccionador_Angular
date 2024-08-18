@@ -9,7 +9,7 @@
     grid-template-areas:
         "Area-uno . . Area-3"
         ". ruleta ruleta ."
-        "Area-2 Bar Bar Area-4";       
+        "Area-2 Bar Bar Area-4";
     background-image: url(../../../assets/Img/Fondo\ Sorteojpg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -21,7 +21,7 @@
 #sombrero {
     position: absolute;
     top: 100px;
-    
+
 }
 
 @media (min-width: 1280px) {
@@ -53,11 +53,81 @@
 
 .Area-uno {
     grid-area: Area-uno;
+    position: relative;
+
 }
+
+.Area-uno .Equipo-1 {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    padding: 20px 0;
+    list-style: none;
+    margin: 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 30vw;
+    height: 60px;
+    animation: Aparación 1s ease-out forwards;
+}
+
+.Area-uno .Equipo-1 li {
+    margin-bottom: 5px 0;
+}
+
+
+.Area-uno:active .Equipo-1 {
+    display: block;
+    animation: Aparación 3s ease-in forwards;
+}
+
+.Area-uno:active #logo {
+    display: block;
+    filter: drop-shadow(0 0 5px #ffff);
+    animation: Aparación 3s ease-in forwards;
+}
+
 
 .Area-2 {
     grid-area: Area-2;
 
+}
+
+.Area-2 .Equipo-2 {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #333;
+    padding: 20px 0;
+    list-style: none;
+    margin: 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 30vw;
+    height: 60px;
+    animation: Aparación 1s ease-out forwards;
+}
+
+.Area-2 .Equipo-2 li {
+    margin-bottom: 5px 0;
+}
+
+.Area-2:active .Equipo-2 {
+    display: block;
+    animation: Aparación 3s ease-in forwards;
+}
+
+.Area-2:active #logo-2 {
+    display: block;
+    filter: drop-shadow(0 0 5px #ffff);
+    animation: Aparación 3s ease-in forwards;
+    margin: 2px;
+    width: 90%;
+   
+    
 }
 
 .Area-3 {
@@ -86,16 +156,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;   
+    margin-top: 10px;
 }
 
 .Area-uno img,
 .Area-2 img,
 .Area-3 img,
 .Area-4 img {
+    position: relative;
     width: 100%;
     height: 100%;
     object-fit: cover;
     margin: 0;
     padding: 0;
+    z-index: 10;
+}
+
+
+
+@keyframes Aparación {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }

@@ -1,9 +1,17 @@
+
 <div class="container">
     <div class="Area-uno">
-      <img src="../../../assets/Img/Casas/IA-1.png" alt="">
+      <img id= "logo" src="../../../assets/Img/Casas/IA-1.png" alt="">
+      <ul class="Equipo-1">
+        
+      </ul>
+     
     </div>
     <div class="Area-2">
-      <img src="../../../assets/Img/Casas/HafflePuff.png" alt="">
+      <img id="logo-2" src="../../../assets/Img/Casas/HafflePuff.png" alt="">
+      <ul class="Equipo-2">
+
+      </ul>
     </div>
     <div class="Area-3">
       <img src="../../../assets/Img/Casas/Ravenclaw Png.png" alt="">
@@ -11,11 +19,12 @@
     <div class="Area-4">
       <img src="../../../assets/Img/Casas/Slytherin-png.png" alt="">
     </div>
+    
     <div class="ruleta">
-      <app-ruleta ></app-ruleta>      
+      <app-ruleta (houseSelected)="onHouseSelected($event)" ></app-ruleta>      
     </div>
     <div class="Bar">
-      <app-nav-bar></app-nav-bar>
+      <app-nav-bar (teamSelected)="onteamSelected($event)"></app-nav-bar>
     </div>
   </div>
  
