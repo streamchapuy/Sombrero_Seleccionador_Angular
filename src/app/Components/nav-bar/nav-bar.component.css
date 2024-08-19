@@ -1,12 +1,13 @@
 .container {
-    max-width: 440px;
-    max-height: 100px;
+    max-width: 400px;
+    max-height: 120px;
     border: 6px groove black;
-    display: flex;    
-    box-sizing: border-box;
+    display: flex;  
+    margin: 0;
+    padding: 0;
     overflow-y: hidden;
-    border-radius: 4px;
-    
+    border-radius: 4px;   
+
 }
 
 .container::-webkit-scrollbar {
@@ -16,10 +17,17 @@
 
 
 .container .escuela {
-    min-width: 110px;
+    min-width: 100px;
     height: 100px;
     line-height: 100px;
     text-align: center;
     background-color: #ddd;
-    margin-right: 2px;
+    margin-right: 4px;
+   
+}
+
+
+
+.escuela:hover {
+    transform: scale(1.1);
 }

@@ -92,6 +92,14 @@
 
 .Area-2 {
     grid-area: Area-2;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    margin-top: -15px;
+    
 
 }
 
@@ -125,9 +133,8 @@
     filter: drop-shadow(0 0 5px #ffff);
     animation: Aparación 3s ease-in forwards;
     margin: 2px;
-    width: 90%;
-   
-    
+    width: 90%; 
+        
 }
 
 .Area-3 {
@@ -137,6 +144,7 @@
 
 .Area-4 {
     grid-area: Area-4;
+    
 }
 
 .ruleta {
@@ -147,7 +155,7 @@
     width: 100%;
     height: auto;
     max-height: 100%;
-    object-fit: contain;
+    object-fit: contain;    
 
 }
 
@@ -156,7 +164,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
+   
 }
 
 .Area-uno img,
@@ -183,3 +191,4 @@
         transform: translateX(0);
     }
 }
+

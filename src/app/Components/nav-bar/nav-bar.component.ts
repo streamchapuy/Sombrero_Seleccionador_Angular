@@ -13,13 +13,17 @@ export class NavBarComponent {
 
   @Output() teamSelected = new EventEmitter<string>();
 
-  teams = ['equipo1', 'equipo2', 'equipo3',
-           'equipo4', 'equipo5', 'equipo6',
-           'equipo7', 'equipo8', 'equipo9', 
-           'equipo10','equipo11', 'equipo12'];
+  teams: string[] = ['../../../assets/Img/Escuelas/Miguel.png',
+    '../../../assets/Img/Escuelas/N°39.png',
+    '../../../assets/Img/Escuelas/N°483.png',
+    '../../../assets/Img/Escuelas/N°552.png',
+    '../../../assets/Img/Escuelas/UTN.png'
+  ]
 
   selectTeam(team: string) {
+    console.log('Equipo seleccionado:', team);
     this.teamSelected.emit(team);
+    
   }
 
 
