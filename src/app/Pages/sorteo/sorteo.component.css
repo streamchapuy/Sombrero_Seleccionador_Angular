@@ -1,8 +1,7 @@
 .container {
     display: grid;
     grid-template-columns: 0.5fr 1.5fr 1.5fr 0.5fr;
-    grid-template-rows: auto auto 0.4fr;
-    /* grid-template-rows: 0.4fr 2.2fr 0.4fr; */
+    grid-template-rows: auto auto 0.4fr;    
     gap: 0px 0px;
     grid-auto-flow: row;
     justify-items: stretch;
@@ -14,7 +13,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 100dvh;
-    width: 100vw;
+    width: 100dvw;
     overflow: hidden;
 }
 
@@ -54,11 +53,10 @@
 .Area-uno {
     grid-area: Area-uno;
     position: relative;
-
+    display: flex;      
 }
 
-.Area-uno .Equipo-1 {
-    display: none;
+.Area-uno .Equipo-1 {       
     position: absolute;
     top: 0;
     left: 0;
@@ -68,45 +66,58 @@
     margin: 0;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    width: 30vw;
+    width: 0px;
     height: 60px;
-    animation: Aparación 1s ease-out forwards;
+    transition: 1s ease-in-out;
+    display: flex;  
+    flex-direction: row-reverse;    
+    justify-content: start;
+    
+    
+   
 }
 
-.Area-uno .Equipo-1 li {
-    margin-bottom: 5px 0;
+.Area-uno .Equipo-1 li {   
+   translate: 130px;
+   transition: 1s;
+   width: 60px;
+   height: 60px;     
+   gap: 5px;
+   overflow: hidden;
+   box-sizing: border-box;
+    
 }
 
 
-.Area-uno:active .Equipo-1 {
-    display: block;
-    animation: Aparación 3s ease-in forwards;
+
+
+.Area-uno:active .Equipo-1 {   
+    width: 30vw;        
+    li {
+        transform: translateX(0);
+        display: flex;
+        overflow: visible;         
+    }   
 }
 
 .Area-uno:active #logo {
     display: block;
     filter: drop-shadow(0 0 5px #ffff);
-    animation: Aparación 3s ease-in forwards;
+    
 }
 
 
 .Area-2 {
     grid-area: Area-2;
-    width: 100px;
-    height: 100px;
+    position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction:column;
-    margin-top: -15px;
-    
 
 }
 
 .Area-2 .Equipo-2 {
-    display: none;
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     background-color: #333;
     padding: 20px 0;
@@ -114,33 +125,116 @@
     margin: 0;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    width: 30vw;
+    width: 0;
     height: 60px;
-    animation: Aparación 1s ease-out forwards;
+    transition: 1s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;    
 }
 
+
+
 .Area-2 .Equipo-2 li {
-    margin-bottom: 5px 0;
+    margin: 150px;
+    transform: translateX(-200px);
+    transition: 1s ease-in-out;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+    
 }
 
 .Area-2:active .Equipo-2 {
-    display: block;
-    animation: Aparación 3s ease-in forwards;
+    width: 30vw;        
+    li {
+        transform: translateX(0);
+        display: flex;
+        overflow: visible;         
+    }   
 }
 
-.Area-2:active #logo-2 {
+.Area-2 #logo-2 {
+    width: 100px;
+    height: 100px;
+    margin-top: -5px;
+}
+
+
+/* .Area-2:active #logo-2 {
     display: block;
     filter: drop-shadow(0 0 5px #ffff);
     animation: Aparación 3s ease-in forwards;
     margin: 2px;
     width: 90%; 
         
-}
+} */
 
 .Area-3 {
-    grid-area: Area-3;
-
+    grid-area: Area-3;    
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
+
+.Area-3 .equipo-3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    padding: 20px 0;
+    list-style: none;
+    margin: 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 60vw;
+    height: 60px;
+    transition: 1s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    translate: 30vw;
+    
+    
+}
+
+.Area-3:hover .equipo-3 {
+   translate: -30vw;
+   transition: 1s ease-in-out;   
+   li {
+    transform: translateX(0);
+    display: flex;
+    overflow: visible;         
+}     
+    
+}
+
+
+.Area-3 .Equipo-3 li {
+    margin: 150px;
+    transition: transform 0.3s ease; /* Transición suave */
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+}
+
+
+.Area-3 #logo-3 {
+    width: 100px;
+    height: 100px;
+    margin-top: -5px;
+}
+
 
 .Area-4 {
     grid-area: Area-4;
@@ -163,8 +257,7 @@
     grid-area: Bar;
     display: flex;
     justify-content: center;
-    align-items: center;
-   
+    align-items: center;   
 }
 
 .Area-uno img,
@@ -178,17 +271,11 @@
     margin: 0;
     padding: 0;
     z-index: 10;
+    display:  flex;
 }
 
-
-
-@keyframes Aparación {
-    0% {
-        transform: translateX(-100%);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
+ul li img {
+    margin-left: px;
+    width: 60px;
+    width: 60px;
 }
-
