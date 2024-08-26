@@ -30,6 +30,7 @@ export class RuletaComponent {
     this.isSpinning = true;
     this.showBubble = true; 
     this.casaSeleccionada = 'mmmmm...'; 
+    
 
     const girosCompletos = 5;
     const anguloFinal = Math.floor(Math.random() * 360);
