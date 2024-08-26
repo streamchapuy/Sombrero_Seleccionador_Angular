@@ -1,3 +1,13 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .container {
     display: grid;
     grid-template-columns: 0.5fr 1.5fr 1.5fr 0.5fr;
@@ -19,7 +29,7 @@
 
 #sombrero {
     position: absolute;
-    top: 100px;
+    top: 30px;
 
 }
 
@@ -45,7 +55,10 @@
         align-items: center;
         max-width: 100%;
         max-height: 100%;
+    }
 
+    #sombrero {
+        top: 200px;
     }
 }
 
@@ -87,7 +100,7 @@
     box-sizing: border-box;
 }
 
-.Area-uno:active .Equipo-1 {
+.Area-uno:hover .Equipo-1 {
     width: 30vw;
 
     li {
@@ -97,7 +110,7 @@
     }
 }
 
-.Area-uno:active #logo {
+.Area-uno:hover #logo {
     display: block;
     filter: drop-shadow(0 0 5px #ffff);
 
@@ -147,7 +160,7 @@
 
 }
 
-.Area-2:active .Equipo-2 {
+.Area-2:hover .Equipo-2 {
     width: 30vw;
 
     li {
@@ -164,14 +177,7 @@
 }
 
 
-/* .Area-2:active #logo-2 {
-    display: block;
-    filter: drop-shadow(0 0 5px #ffff);
-    animation: Aparación 3s ease-in forwards;
-    margin: 2px;
-    width: 90%; 
-        
-} */
+
 
 .Area-3 {
     grid-area: Area-3;
@@ -202,7 +208,7 @@
 
 }
 
-.Area-3:active .equipo-3 {
+.Area-3:hover .equipo-3 {
     translate: -20vw;
     position: absolute;
     top: 0;
@@ -233,7 +239,7 @@
     margin-top: -5px;
 }
 
-.Area-3:active #logo-3 {
+.Area-3:hover #logo-3 {
     filter: drop-shadow(0 0 5px #ffff);
 }
 
@@ -266,7 +272,7 @@
     translate: 100px;
 }
 
-.Area-4:active .equipo-4 {
+.Area-4:hover .equipo-4 {
     translate: -20vw;
     display: flex;
     flex-direction: row;
@@ -294,7 +300,7 @@
     margin-top: -5px;
 }
 
-.Area-4:active #logo-4 {
+.Area-4:hover #logo-4 {
     filter: drop-shadow(0 0 5px #ffff);
 }
 
