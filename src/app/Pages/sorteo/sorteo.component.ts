@@ -1,4 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
+import { NavBarComponent } from '../../Components/nav-bar/nav-bar.component';
 
 @Component({
   selector: 'app-sorteo',
@@ -6,10 +7,7 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
   styleUrls: ['./sorteo.component.css']
 })
 export class SorteoComponent {
-  @ViewChild('equipo1') equipo1!: ElementRef;
-  @ViewChild('equipo2') equipo2!: ElementRef;
-  @ViewChild('equipo3') equipo3!: ElementRef;
-  @ViewChild('equipo4') equipo4!: ElementRef;
+  @ViewChild('navBar') navBarComponent!: NavBarComponent;
 
   equiposPorCasa: { [key: string]: string[] } = {
     Gryffindor: [],
@@ -33,12 +31,27 @@ export class SorteoComponent {
   assignTeamToHouse() {
     if (this.selectedTeam && this.selectedHouse) {
       const houseTeams = this.equiposPorCasa[this.selectedHouse];
-      if (!houseTeams.includes(this.selectedTeam)) {
-        houseTeams.push(this.selectedTeam);
+
+      
+      if (houseTeams.length < 3) {
+        if (!houseTeams.includes(this.selectedTeam)) {
+          houseTeams.push(this.selectedTeam);
+        }
+        this.updateTeamList();
+      } else {
+        console.log(`La casa ${this.selectedHouse} ya tiene 3 escuelas asignadas.`);
       }
-      this.updateTeamList();
-      this.selectedTeam = null;
-      this.selectedHouse = null;
+
+     
+      setTimeout(() => {
+        if (this.selectedTeam && this.navBarComponent) {
+          this.navBarComponent.removeTeam(this.selectedTeam); 
+          console.log(`Equipo eliminado del NavBar: ${this.selectedTeam}`);
+          this.selectedTeam = null; 
+        }
+      }, 100);
+
+      this.selectedHouse = null; 
     }
   }
 

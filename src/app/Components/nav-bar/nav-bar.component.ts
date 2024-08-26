@@ -10,22 +10,30 @@ export class NavBarComponent {
   startX: number = 0;
   scrollLeft: number = 0;
 
-
   @Output() teamSelected = new EventEmitter<string>();
 
-  teams: string[] = ['../../../assets/Img/Escuelas/Miguel.png',
+  teams: string[] = [
+    '../../../assets/Img/Escuelas/Miguel.png',
     '../../../assets/Img/Escuelas/N°39.png',
     '../../../assets/Img/Escuelas/N°483.png',
     '../../../assets/Img/Escuelas/N°552.png',
     '../../../assets/Img/Escuelas/UTN.png'
   ]
 
+  selectedTeam: string | null = null;
+
+
   selectTeam(team: string) {
     console.log('Equipo seleccionado:', team);
     this.teamSelected.emit(team);
-    
+    setTimeout(() => {
+      this.removeTeam(team);
+    }, 8000);
   }
 
+  removeTeam(team: string) {
+    this.teams = this.teams.filter(t => t !== team);
+  }
 
   startDrag(event: MouseEvent) {
     this.isDragging = true;

@@ -1,6 +1,6 @@
 .container {
-    max-width: 400px;
-    max-height: 120px;
+    min-width: 400px;
+    min-height: 120px;
     border: 6px groove black;
     display: flex;  
     margin: 0;
@@ -16,18 +16,23 @@
 }
 
 
+
 .container .escuela {
-    min-width: 100px;
-    height: 100px;
+    min-width: 80px;
+    height: 80px;
     line-height: 100px;
     text-align: center;
     background-color: #ddd;
-    margin-right: 4px;
-   
+    margin-right: 4px;  
 }
+
 
 
 
 .escuela:hover {
     transform: scale(1.1);
+}
+
+.escuela li.selected {
+    border: 2px solid black;
 }

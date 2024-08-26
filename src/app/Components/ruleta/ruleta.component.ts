@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, ViewChild, viewChild } from '@angular/core';
+import { NavBarComponent } from '../nav-bar/nav-bar.component';
 
 @Component({
   selector: 'app-ruleta',
@@ -15,6 +16,8 @@ export class RuletaComponent {
   casaSeleccionada: string = '';
 
   @Output() houseSelected = new EventEmitter<string>();
+  
+
 
   casas: string[] = ['Ravenclaw', 'Slytherin', 'Gryffindor', 'Hufflepuff'];
 
