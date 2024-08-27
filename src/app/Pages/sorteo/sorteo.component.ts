@@ -42,9 +42,6 @@ export class SorteoComponent {
     if (school === 'UTN') {
       equipoObjetivo = 'Slytherin';
     }
-    if (this.ruletaComponent) {
-      this.ruletaComponent.equipoObjetivo = equipoObjetivo;
-    }
   }
 
 
