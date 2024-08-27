@@ -1,0 +1,76 @@
+@media (min-width: 1280px) {
+    .componente {
+        grid-template-columns: 0.3fr 2fr 2fr 0.3fr;
+        grid-template-rows: 0.3fr 2.5fr 0.3fr;
+    }
+}
+
+.Componente {
+    background-image: url('../../../assets/Img/Background/Inicio_Background.jpg');
+    background-size: cover;
+    background-position: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    height: 98vh;
+    cursor: url('../../../assets/LaVaritaDeHarry/VaritaCursorBody.png') 0 0 ,auto;
+    box-sizing: border-box;
+}
+
+.Blur {
+    width: 50%;
+    height: 100vh;
+    backdrop-filter: blur(4px);
+    background-color: rgba(100, 100, 100, 0.169);
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    align-content: center;
+    align-items: start;
+}
+
+.EscudoInicio{
+    width: 400px;
+    height: 600px;
+}
+
+@font-face {
+    font-family: HarryPotter;
+    src: url('../../../assets/Font/HARRYP__.TTF');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.HarryFont {
+    font-family: HarryPotter;
+    font-size: 56px;
+    color: #d0bb00;
+    margin: 20px;
+}
+
+#IniciarSorteo {
+    background-color: #d0bb00;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 26px;
+    margin: 4px 2px;
+    cursor: url('../../../assets/LaVaritaDeHarry/VaritaCursorLeft.png') 0 0 ,auto;
+    border-radius: 65px;
+}
+
+#IniciarSorteo:hover{
+    background-color: #f6cd00;
+}
+
+.HarryStyles {
+    text-shadow: #0093d2 0 0 20px;
+    margin-top: -60px;
+}
+
+.ContenedorBoton {
+    padding-bottom: 60px;
+}
