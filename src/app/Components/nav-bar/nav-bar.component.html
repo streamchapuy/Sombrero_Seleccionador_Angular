@@ -1,0 +1,13 @@
+<div class="container" 
+     (mousedown)="startDrag($event)" 
+     (mousemove)="onDrag($event)" 
+     (mouseup)="stopDrag()" 
+     (wheel)="onWhell($event)">
+  
+  <div *ngFor="let team of teams; let i = index" 
+       class="escuela" 
+       [ngClass]="{'selected': selectedTeam === team}" 
+       (click)="selectTeam(team)">
+    <img class="escuela" [src]="team" alt="Escudo {{i + 1}}">
+  </div>
+</div>
