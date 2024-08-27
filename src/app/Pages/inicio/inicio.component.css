@@ -13,7 +13,7 @@
     flex-direction: column;
     align-content: center;
     flex-wrap: wrap;
-    height: 98vh;
+    height: 100vh;
     cursor: url('../../../assets/LaVaritaDeHarry/VaritaCursorBody.png') 0 0 ,auto;
     box-sizing: border-box;
 }
