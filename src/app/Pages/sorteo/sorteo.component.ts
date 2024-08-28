@@ -19,7 +19,7 @@ export class SorteoComponent {
     Slytherin: []
   };
 
-  selectedTeam: string | null = null;
+  selectedTeam: string = '';
   selectedHouse: string | null = null;
   slectedSchool: string | null = null;
 
@@ -53,20 +53,18 @@ export class SorteoComponent {
       if (houseTeams.length < 3) {
         if (!houseTeams.includes(this.selectedTeam)) {
           houseTeams.push(this.selectedTeam);
+          this.updateTeamList();
+        } else {
+          console.log(`La casa ${this.selectedHouse} ya tiene 3 escuelas asignadas.`);
         }
-        this.updateTeamList();
-      } else {
-        console.log(`La casa ${this.selectedHouse} ya tiene 3 escuelas asignadas.`);
+          if (this.navBarComponent) {
+            this.navBarComponent.removeTeam(this.selectedTeam); 
+            console.log(`Equipo eliminado del NavBar: ${this.selectedTeam}`);
+            this.selectedTeam = ''; 
+          }
       }
 
      
-      setTimeout(() => {
-        if (this.selectedTeam && this.navBarComponent) {
-          this.navBarComponent.removeTeam(this.selectedTeam); 
-          console.log(`Equipo eliminado del NavBar: ${this.selectedTeam}`);
-          this.selectedTeam = null; 
-        }
-      }, 100);
 
       this.selectedHouse = null; 
     }

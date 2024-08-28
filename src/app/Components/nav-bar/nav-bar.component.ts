@@ -17,7 +17,14 @@ export class NavBarComponent {
     '../../../assets/Img/Escuelas/N°39.png',
     '../../../assets/Img/Escuelas/N°483.png',
     '../../../assets/Img/Escuelas/N°552.png',
-    '../../../assets/Img/Escuelas/UTN.png'
+    '../../../assets/Img/Escuelas/UTN.png',
+    '../../../assets/Img/Escuelas/UTN(test).png',
+    '../../../assets/Img/Escuelas/N°552 - copia.png',
+    '../../../assets/Img/Escuelas/N°552 - copia (3).png',
+    '../../../assets/Img/Escuelas/N°552 - copia (4).png',
+    '../../../assets/Img/Escuelas/N°552 - copia (5).png',
+    '../../../assets/Img/Escuelas/N°552 - copia (6).png',
+    '../../../assets/Img/Escuelas/N°552 - copia (2).png'
   ]
 
   selectedTeam: string | null = null;
@@ -26,9 +33,7 @@ export class NavBarComponent {
   selectTeam(team: string) {
     console.log('Equipo seleccionado:', team);
     this.teamSelected.emit(team);
-    setTimeout(() => {
-      this.removeTeam(team);
-    }, 8000);
+    
   }
 
   removeTeam(team: string) {
