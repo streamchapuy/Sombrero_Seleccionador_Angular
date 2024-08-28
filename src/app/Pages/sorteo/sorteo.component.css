@@ -28,7 +28,7 @@ body {
 
 #sombrero {
     position: absolute;
-    top: 30px;
+    top: 0px;
 
 }
 
@@ -80,42 +80,41 @@ body {
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     width: 0px;
-    height: 60px;
+    height: 70%;
     transition: 1s ease-in-out;
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: start;
-
-
-
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: start;
 }
 
 .Area-uno .Equipo-1 li {
-    translate: 130px;
     transition: 1s;
-    width: 60px;
-    height: 60px;
-    gap: 5px;
+    width: 80px;
+    height: 80px;
+    gap: 10px;
     overflow: hidden;
     box-sizing: border-box;
+    gap: 10px;
+    margin-right: 60px;
 }
 
 .Area-uno:hover .Equipo-1 {
     width: 30vw;
-
+    filter: drop-shadow(0 0 15px #ff3b76);
     li {
         transform: translateX(0);
         display: flex;
         overflow: visible;
+        gap: 50%;
     }
 }
 
 .Area-uno:hover #logo {
     display: block;
-    filter: drop-shadow(0 0 5px #ffff);
+    filter: drop-shadow(0 0 15px #ff3b76);
 
 }
-
 
 .Area-2 {
     grid-area: Area-2;
@@ -136,22 +135,22 @@ body {
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     width: 0;
-    height: 60px;
+    height: 70%;
     transition: 1s ease-in-out;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: start;
 }
 
 
 
 .Area-2 .Equipo-2 li {
-    margin-left: 60px;
+    margin-right: 60px;
     transform: translateX(-200px);
     transition: 1s ease-in-out;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -162,11 +161,12 @@ body {
 
 .Area-2:hover .Equipo-2 {
     width: 30vw;
-
+    filter: drop-shadow(0 0 15px #fffb00);
     li {
         transform: translateX(0);
         display: flex;
         overflow: visible;
+        gap: 50%;
     }
 }
 
@@ -176,8 +176,10 @@ body {
     margin-top: -5px;
 }
 
-
-
+.Area-2:hover #logo-2 {
+    display: block;
+    filter: drop-shadow(0 0 15px #fffb00);
+}
 
 .Area-3 {
     grid-area: Area-3;
@@ -199,39 +201,39 @@ body {
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     width: 60vw;
-    height: 60px;
+    height: 70%;
     transition: 1s;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: center;
-    translate: 100px;
-
+    translate: 100%;
 }
 
 .Area-3:hover .equipo-3 {
-    translate: -20vw;
+    translate: -30%;
     position: absolute;
     top: 0;
-    left: -40px;
+    left: -120%;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
     list-style: none;
+    filter: drop-shadow(0 0 15px #00d5ff);
 
     li {
         display: flex;
-        justify-content: right;
         overflow: hidden;
-        gap: 20px;
+        gap: 5%;
         box-sizing: border-box;
         padding: 0;
+        margin-left: 60px;
+        gap: 25%;
+        width: 80px;
+        height: 80px;
     }
 
 }
-
-
-
-
 
 .Area-3 #logo-3 {
     width: 100px;
@@ -240,7 +242,8 @@ body {
 }
 
 .Area-3:hover #logo-3 {
-    filter: drop-shadow(0 0 5px #ffff);
+    display: block;
+    filter: drop-shadow(0 0 15px #00d5ff);
 }
 
 
@@ -248,8 +251,6 @@ body {
     grid-area: Area-4;
     position: relative;
     display: flex;
-
-
 }
 
 .Area-4 .equipo-4 {
@@ -263,36 +264,35 @@ body {
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     width: 60vw;
-    height: 60px;
+    height: 70%;
     transition: 1s ease-in-out;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: center;
-    align-items: start;
-    translate: 100px;
+    align-items: center;
+    translate: 15%;
 }
 
 .Area-4:hover .equipo-4 {
-    translate: -20vw;
+    translate: -40%;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
     list-style: none;
-
+    filter: drop-shadow(0 0 15px #26ff00);
     li {
         display: flex;
         overflow: hidden;
-        gap: 20px;
+        gap: 25%;
         box-sizing: border-box;
         padding: 0;
-
+        margin-left: 60px;
+        width: 80px;
+        height: 80px;
     }
 
 }
-
-
-
-
 
 .Area-4 #logo-4 {
     width: 100px;
@@ -301,11 +301,9 @@ body {
 }
 
 .Area-4:hover #logo-4 {
-    filter: drop-shadow(0 0 5px #ffff);
+    display: block;
+    filter: drop-shadow(0 0 15px #26ff00);
 }
-
-
-
 
 .ruleta {
     grid-area: ruleta;
@@ -341,7 +339,6 @@ body {
 }
 
 ul li img {
-    margin-left: px;
     width: 60px;
     width: 60px;
 }
