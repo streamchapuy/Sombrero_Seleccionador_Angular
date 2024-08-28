@@ -51,7 +51,7 @@ export class NavBarComponent {
     if (!this.isDragging) return;
     const x = event.pageX - this.startX;
     const target = event.currentTarget as HTMLElement;
-    const walk = x - this.scrollLeft; // Desplazamiento del cursor
+    const walk = x - this.scrollLeft;
     target.scrollLeft = this.scrollLeft - walk;
   }
 
