@@ -31,8 +31,6 @@
 }
 
 .EscudoInicio{
-    width: 400px;
-    height: 600px;
     width: 300px;
     height: 400px;
     margin-bottom: 60%;
@@ -45,7 +43,6 @@
     font-style: normal;
 }
 
-.HarryFont {
 .HarryFontArriba {
     font-family: HarryPotter;
     font-size: 96px;
@@ -65,7 +62,6 @@
     font-family: HarryPotter;
     font-size: 56px;
     color: #d0bb00;
-    margin: 20px;
 }
 
 #IniciarSorteo {
