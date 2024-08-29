@@ -1,5 +1,42 @@
-    <div class="Contenedor">
-        <div class="LetraPotter">
-            <p class="HarryFont">------------Esta es la fuente HarryFont------------</p>
-        </div>
-    </div>
+<body>
+  <div class="container">
+      <div class="Area-uno">
+        <img id= "logo" src="../../../assets/Img/Casas/IA-1.png" alt="">
+        <ul class="Equipo-1">
+          <li  
+          *ngFor="let equipo of equiposPorCasa['Gryffindor']"
+          ><img [src]="equipo" alt=""></li>
+        </ul>     
+      </div>
+      <div class="Area-2">
+        <img id="logo-2" src="../../../assets/Img/Casas/HafflePuff.png" alt="">
+        <ul class="Equipo-2">
+          <li
+          *ngFor="let equipo of equiposPorCasa['Hufflepuff']"
+          ><img [src]="equipo" alt=""> </li>   
+        </ul>
+      </div>
+      <div class="Area-3">
+        <img id="logo-3" src="../../../assets/Img/Casas/Ravenclaw Png.png" alt="">
+        <ul class="equipo-3">
+          <li
+          *ngFor="let equipo of equiposPorCasa['Ravenclaw']"
+          ><img [src]="equipo" alt=""> </li>
+        </ul>
+      </div>
+      <div class="Area-4">
+        <img id="logo-4" src="../../../assets/Img/Casas/Slytherin-png.png" alt="">
+        <ul class="equipo-4">
+          <li
+          *ngFor="let equipo of equiposPorCasa['Slytherin']"
+          ><img [src]="equipo" alt=""> </li>
+        </ul>
+      </div>    
+      <div class="ruleta">
+        <app-ruleta (houseSelected)="onHouseSelected($event)" ></app-ruleta>      
+      </div>
+      <div class="Bar">
+        <app-nav-bar #navBar (teamSelected)="onteamSelected($event)"></app-nav-bar>
+      </div>
+    </div>   
+</body>
