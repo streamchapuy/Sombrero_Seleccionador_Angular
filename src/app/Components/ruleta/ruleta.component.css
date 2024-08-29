@@ -1,0 +1,208 @@
+@media (max-width: 1920px) {
+    #sombrero {
+        top: 20%;
+        left: 51%;
+        width: 15%;
+    }
+}
+
+
+
+#sombrero {
+    position: absolute;
+    top: 6%;
+    left: 51%;
+    transform: translateX(-50%);
+    z-index: 10;
+    width: 15%;
+}
+
+
+.ruleta-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #000;
+    margin-top: 2%;
+    z-index: 5;
+}
+
+.ruleta {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: rotate(0deg);
+    transition: transform 4s cubic-bezier(0.33, 1, 0.68, 1);
+    transform-style: preserve-3d;
+}
+
+.seccion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 0;
+    left: 50%;
+    transform-origin: 0 100%;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    border: solid 2px #000;
+}
+
+.seccion:nth-child(1) {
+    background-color: rgb(32, 15, 48);
+    transform: rotate(0deg);
+    border: solid 2px black;
+}
+
+.seccion:nth-child(2) {
+    background-color: rgba(22, 88, 8, 0.881);
+    transform: rotate(90deg);
+    border: solid 2px black;
+}
+
+.seccion:nth-child(3) {
+    background-color: rgba(202, 197, 47, 0.857);
+    transform: rotate(180deg);
+    border: solid 2px black;
+}
+
+.seccion:nth-child(4) {
+    background-color: rgb(88, 5, 5);
+    transform: rotate(270deg);
+    border: solid 2px black;
+}
+
+.circle-with-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid black;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+}
+
+.seccion #img-1 {
+    transform: rotate(90deg);
+    position: absolute;
+    top: 0px;
+    left: -100px;
+
+
+}
+
+.seccion #img-2 {
+    text-align: center;
+    transform: rotate(-180deg);
+    position: absolute;
+    top: 0px;
+    left: -120px;
+
+}
+
+.seccion #img-3 {
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 20px;
+    left: -100px;
+}
+
+.seccion #img-4 {
+    position: absolute;
+    top: 0px;
+    left: -100px;
+}
+
+.contendor {    
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 100%;
+    height: 30px;
+    padding: 10px;
+    text-align: center;   
+}
+
+.buuble {
+    position: absolute;
+    top: 12%;
+    right: 24%;
+    transform: translateX(-50%);
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    width: 300px;
+    height: 40px;
+    background: #fff;
+    border-radius: 45px;
+    padding: 10px 0px;
+    text-align: center;
+    color: #000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+}
+
+
+.buuble.show {  
+    display: block;
+    
+}
+
+.buuble-botton-left::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 24px solid #fff;
+    border-right: 12px solid transparent;
+    border-top: 12px solid #fff;
+    border-bottom: 23px solid transparent;
+    left: 10px;
+    bottom: -24px;
+}
+
+.HarryFont {
+    font-family: HarryPotter;
+    font-size: 26px;
+    color: #000000;
+    margin: 20px;
+    text-shadow: #00d5ff 0 0 20px;
+}
+
+@font-face {
+    font-family: HarryPotter;
+    src: url('../../../assets/Font/HARRYP__.TTF');
+    font-weight: normal;
+    font-style: normal;
+}

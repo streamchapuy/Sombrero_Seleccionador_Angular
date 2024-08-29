@@ -1,0 +1,44 @@
+.container {
+    max-width: 5.2%;
+    max-height: 5%;
+    border: 12px groove rgb(0, 0, 0);
+    display: flex;  
+    padding: 0px;
+    border-radius: 10%;
+    justify-content: space-evenly;    
+    position: relative; 
+}
+
+.container::-webkit-scrollbar {
+    width: 0%;
+    height: 0%;
+}
+
+
+
+.container .escuelita {
+    min-width: 100%;
+    height: 11vh;
+    line-height: 100%;
+    text-align: center;
+    background-color: white;
+    margin-right: 10%;
+    object-fit: cover;
+    position: absolute;
+    border: 12px groove black;
+    border-radius: 20px;
+}
+
+
+
+
+.escuela:hover {
+    transform: scale(1.6);
+}
+
+.escuela {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20%;
+}

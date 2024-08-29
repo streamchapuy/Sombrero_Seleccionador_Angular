@@ -33,6 +33,9 @@
 .EscudoInicio{
     width: 400px;
     height: 600px;
+    width: 300px;
+    height: 400px;
+    margin-bottom: 60%;
 }
 
 @font-face {
@@ -43,6 +46,22 @@
 }
 
 .HarryFont {
+.HarryFontArriba {
+    font-family: HarryPotter;
+    font-size: 96px;
+    color: #d0bb00;
+    margin-bottom: -20%;
+    padding-top: 20%;
+}
+
+.HarryFontAbajo {
+    font-family: HarryPotter;
+    font-size: 66px;
+    color: #d0bb00;
+    margin-top: -20%;
+}
+
+.HarryFontBoton {
     font-family: HarryPotter;
     font-size: 56px;
     color: #d0bb00;
@@ -73,4 +92,5 @@
 
 .ContenedorBoton {
     padding-bottom: 60px;
+    margin-top: -18%;
 }

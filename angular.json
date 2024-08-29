@@ -31,7 +31,11 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
+<<<<<<< Updated upstream
               "src/favicon.ico",
+=======
+              "src/favicon.png",
+>>>>>>> Stashed changes
               "src/assets"
             ],
             "styles": [
@@ -90,7 +94,11 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
+<<<<<<< Updated upstream
               "src/favicon.ico",
+=======
+              "src/favicon.png",
+>>>>>>> Stashed changes
               "src/assets"
             ],
             "styles": [
