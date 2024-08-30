@@ -10,7 +10,7 @@
 
 #sombrero {
     position: absolute;
-    top: 12vh;
+    top: 6%;
     left: 51%;
     transform: translateX(-50%);
     z-index: 10;
@@ -155,7 +155,7 @@ img {
 .buuble {
     position: absolute;
     top: 16vh;
-    right: 25vw;
+    right: 25vw;  
     transform: translateX(-50%);
     font-family: sans-serif;
     font-size: 18px;
