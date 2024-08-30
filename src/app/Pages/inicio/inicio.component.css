@@ -12,10 +12,10 @@
     display: flex;
     flex-direction: column;
     align-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap;    
     height: 100vh;
     cursor: url('../../../assets/LaVaritaDeHarry/VaritaCursorBody.png') 0 0 ,auto;
-    box-sizing: border-box;
+    overflow-y: hidden;
 }
 
 .Blur {
@@ -28,6 +28,7 @@
     justify-content: center;
     align-content: center;
     align-items: start;
+    
 }
 
 .EscudoInicio{
@@ -90,3 +91,29 @@
     padding-bottom: 60px;
     margin-top: -18%;
 }
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+#Volumen {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-left: 75%;    
+}
+
+input[type="range"] {
+    width: 55%;    
+    background: #0e0c0c;
+    border-radius: 50%;
+    outline: #0e0c0c;
+    
+}
+
+

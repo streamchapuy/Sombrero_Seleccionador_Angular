@@ -23,12 +23,12 @@ body {
     background-size: cover;
     cursor: url('../../../assets/LaVaritaDeHarry/VaritaCursorBody.png') 0 0 ,auto;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
     margin: 0;
     padding: 0;
     z-index: 10;
-    display: flex;
+    
 }
 
 .LetraPotter .HarryFont {
@@ -66,6 +66,7 @@ body {
     }
 
     .ruleta {
+       
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -80,9 +81,7 @@ body {
 }
 
 
-.Area-uno {
-    grid-area: Area-uno;
-    position: relative;
+.Area-uno {      
     display: flex;
     width: 100px;
     height: 100px;
@@ -100,7 +99,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     width: 0;
-    height: 70%;
+    height: 10%;
     transition: 1.25s;
     display: flex;
     flex-direction: row;
