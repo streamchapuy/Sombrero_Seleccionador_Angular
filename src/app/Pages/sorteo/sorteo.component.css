@@ -2,33 +2,32 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    display: flex;
+    display: flex;    
     justify-content: center;
     align-items: center;
+    background-image: url(../../../assets/Img/Background/Sorteo_Background.jpg);    
+    background-repeat: no-repeat;
+    background-size: cover;    
+    
 }
+
+
 
 .container {
     display: grid;
     grid-template-columns: 0.5fr 1.5fr 1.5fr 0.5fr;
-    grid-template-rows: auto auto 0.4fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    justify-items: stretch;
+    grid-template-rows: auto auto 0.4fr;     
     grid-template-areas:
         "Area-uno . . Area-3"
         ". ruleta ruleta ."
-        "Area-2 Bar Bar Area-4";
-    background-image: url(../../../assets/Img/Background/Sorteo_Background.jpg);
-    background-image: url(../../../assets/Img/Background/Sorteo_Background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    cursor: url('../../../assets/LaVaritaDeHarry/VaritaCursorBody.png') 0 0 ,auto;
+        "Area-2 Bar Bar Area-4";      
+    cursor: url('../../../assets/LaVaritaDeHarry/VaritaCursorBody.png') 0 0, auto;
     width: 100%;
     height: 100vh;
-    object-fit: cover;
     margin: 0;
     padding: 0;
     z-index: 10;
+    overflow: hidden;
     
 }
 
@@ -37,70 +36,42 @@ body {
     color: rgb(197, 174, 4);
     text-shadow: rgb(0, 151, 245) 0 0 20px;
     font-size: 80px;
-    margin: 0%;
-    height: 98vh;
-    height: 100dvh;
-    width: 100dvw;
+    margin: 0;
+    width: 100%;
     overflow: hidden;
 }
 
 #sombrero {
     position: absolute;
     top: 0px;
-
 }
 
-@media (min-width: 1280px) {
-    .container {
-        grid-template-columns: 0.3fr 2fr 2fr 0.3fr;
-        grid-template-rows: 0.3fr 2.5fr 0.3fr;
-
-    }
-
-
-    .Area-uno img,
-    .Area-2 img,
-    .Area-3 img,
-    .Area-4 img {
-        width: 200px;
-        height: 200px;
-    }
-
-    .ruleta {
-       
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        max-width: 100%;
-        max-height: 100%;
-    }
-
-    #sombrero {
-        top: 200px;
-    }
-}
-
-
-.Area-uno {      
+.Area-uno, .Area-2, .Area-3, .Area-4 {
     display: flex;
-    width: 100px;
-    height: 100px;
-    margin-top: 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+.Area-uno {
+    grid-area: Area-uno;    
+    width: 100%;
+    height: auto;
+    margin-bottom: 90%;  
+    
 }
 
 .Area-uno .Equipo-1 {
     position: absolute;
-    top: 0;
+    top: 2.2vh;
     left: 0;
     background-color: #333;
-    padding: 20px 0;
+    padding: 41px 0;
     list-style: none;
     margin: 0;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    width: 0;
-    height: 10%;
+    width: 0%;
+    height: 5%;
     transition: 1.25s;
     display: flex;
     flex-direction: row;
@@ -122,48 +93,49 @@ body {
 .Area-uno:hover .Equipo-1 {
     width: 30vw;
     filter: drop-shadow(0 0 15px #ff3b76);
-    li {
-        transform: translateX(0);
-        display: flex;
-        overflow: visible;
-        gap: 5%;
-    }
 }
 
-.Area-uno:hover #logo {
-    display: block;
+.Area-uno:hover #logo{
     filter: drop-shadow(0 0 15px #ff3b76);
-
 }
+
 
 .Area-2 {
     grid-area: Area-2;
     position: relative;
     display: flex;
     justify-content: center;
-    width: 150px;
-    height: 100px;
+    width: 100%;
+    height: auto;
 }
+
+.Area-2 #logo-2 {
+    margin-bottom: 15%;
+}
+
 
 .Area-2 .Equipo-2 {
     position: absolute;
-    top: 0;
+    bottom: 2vh;
     left: 0;
     background-color: #333;
-    padding: 20px 0;
+    padding: 60px 0;
     list-style: none;
     margin: 0;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     width: 0;
-    height: 70%;
+    height: 5%;
     transition: 1.25s;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    align-items: start;
+    align-items: flex-end;
 }
 
+.Area-2:hover #logo-2 {
+    filter: drop-shadow(0 0 15px #fffb00);
+}
 
 
 .Area-2 .Equipo-2 li {
@@ -177,28 +149,10 @@ body {
     align-items: center;
     gap: 10px;
     overflow: hidden;
-
 }
 
 .Area-2:hover .Equipo-2 {
     width: 30vw;
-    filter: drop-shadow(0 0 15px #fffb00);
-    li {
-        transform: translateX(0);
-        display: flex;
-        overflow: visible;
-        gap: 5%;
-    }
-}
-
-.Area-2 #logo-2 {
-    width: 100px;
-    height: 100px;
-    margin-top: -5px;
-}
-
-.Area-2:hover #logo-2 {
-    display: block;
     filter: drop-shadow(0 0 15px #fffb00);
 }
 
@@ -208,136 +162,88 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 150px;
-    height: 100px;
+    width: 100%;
+    height: auto;
     margin-top: 10%;
 }
 
 .Area-3 .equipo-3 {
+    translate: 100%;    
     position: absolute;
     top: 0;
     left: 0;
     background-color: #333;
-    padding: 20px 0;
+    padding: 30px 0;
     list-style: none;
     margin: 0;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     width: 50vw;
-    height: 70%;
+    height: 20%;
     transition: 1.25s;
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
-    translate: 100%;
 }
 
 .Area-3:hover .equipo-3 {
     translate: -30%;
-    position: absolute;
-    top: 0;
-    left: -120%;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    align-items: center;
-    list-style: none;
     filter: drop-shadow(0 0 15px #00d5ff);
-
-    li {
-        display: flex;
-        overflow: hidden;
-        gap: 5%;
-        box-sizing: border-box;
-        padding: 0;
-        margin-left: 60px;
-        width: 80px;
-        height: 80px;
-    }
-
 }
 
 .Area-3 #logo-3 {
-    width: 100px;
-    height: 100px;
-    margin-top: -5px;
+    margin-bottom: 100%;
 }
-
-.Area-3:hover #logo-3 {
-    display: block;
-    filter: drop-shadow(0 0 15px #00d5ff);
-}
-
 
 .Area-4 {
     grid-area: Area-4;
     position: relative;
     display: flex;
-    width: 150px;
-    height: 100px;
+    width: 100%;
+    height: auto;    
 }
 
+.Area-4 #logo-4 {
+    margin-bottom: 15%;
+}
+
+
 .Area-4 .equipo-4 {
+    translate: 100%;    
     position: absolute;
-    top: 0;
+    bottom: 2vh;
     left: 0;
     background-color: #333;
-    padding: 20px 0;
+    padding: 48px 0;
     list-style: none;
     margin: 0;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    width: 70vw;
-    height: 70%;
+    width: 50vw;
+    height: 20%;
     transition: 1.25s;
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
-    translate: 100%;
 }
 
 .Area-4:hover .equipo-4 {
     translate: -40%;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    align-items: center;
-    list-style: none;
-    filter: drop-shadow(0 0 15px #26ff00);
-    li {
-        display: flex;
-        overflow: hidden;
-        gap: 5%;
-        box-sizing: border-box;
-        padding: 0;
-        margin-left: 60px;
-        width: 80px;
-        height: 80px;
-    }
-
-}
-
-.Area-4 #logo-4 {
-    width: 100px;
-    height: 100px;
-    margin-top: -5px;
-}
-
-.Area-4:hover #logo-4 {
-    display: block;
     filter: drop-shadow(0 0 15px #26ff00);
 }
 
 .ruleta {
     grid-area: ruleta;
+    position: relative;
     align-items: center;
     justify-content: center;
     display: flex;
+    flex-direction: column;
     width: 100%;
     min-height: 90%;
     max-height: 90%;
-    object-fit: contain;
-
+    margin: 0;   
+    
 }
 
 .Bar {
@@ -348,21 +254,129 @@ body {
     margin-bottom: 10%;
 }
 
+app-sombrero {
+    position: absolute; 
+    top: -115%; 
+    left: 50%; 
+    transform: translateX(-50%);
+    z-index: 10;        
+}
+
+
+
 .Area-uno img,
 .Area-2 img,
 .Area-3 img,
 .Area-4 img {
-    position: relative;
     width: 100px;
     height: 100px;
-   
-    margin: 0;
-   
     z-index: 10;
-    display: flex;
 }
 
 ul li img {
+    width: 100px;   
+}
+@media (max-width: 1920px) {
+
+    .container {
+        display: grid;
+        grid-template-columns: 0.5fr 1.5fr 1.5fr 0.5fr;
+        grid-template-rows: auto auto 0.4fr;     
+        grid-template-areas:
+            "Area-uno . . Area-3"
+            ". ruleta ruleta ."
+            "Area-2 Bar Bar Area-4";      
+        cursor: url('../../../assets/LaVaritaDeHarry/VaritaCursorBody.png') 0 0, auto;
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        z-index: 10;
+        overflow: hidden;       
+        
+    }
+
+    app-sombrero {
+        position: absolute; /* Posiciona el sombrero en relación con la ruleta */
+        top: -55%; /* Ajusta este valor según la altura del sombrero y ruleta */
+        left: 50%; /* Centra el sombrero horizontalmente */
+        transform: translateX(-50%); /* Ajuste fino para centrar exactamente */
+        z-index: 10;     
+        
+    }
+
+    .ruleta {
+        grid-area: ruleta;        
+        width: 100%;
+        min-height: 90%;
+        max-height: 90%;
+        margin: 0;  
+        align-items: center; 
+        
+    }
+    
+    .Area-uno img  {
+        width: 100px;
+        height: 100px;
+        z-index: 10;
+       margin-top: 10%;
+       margin-right: 40%;
+    }
+
+    .Area-2 img  {
+        width: 100px;
+        height: 100px;
+        z-index: 10;      
+       margin-right: 40%;
+    }
+
+   .Area-3 img {
     width: 100px;
+    height: 100px;
+    z-index: 10;
+    margin-top: 5%;
+    margin-left: 40%;
+   }
+
+   .Area-4 img {
     width: 100px;
+    height: 100px;
+    z-index: 10;    
+    margin-left: 40%;
+   }
+
+    
+
+    
+
+    
+}
+
+
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "Area-uno"
+            "ruleta"
+            "Area-2"
+            "Area-3"
+            "Area-4"
+            "Bar"; 
+        height: auto;
+    }
+
+    .Area-uno, .Area-2, .Area-3, .Area-4, .ruleta, .Bar {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #sombrero {
+        top: 10px;
+    }
+
+    .LetraPotter .HarryFont {
+        font-size: 40px;
+    }
 }
