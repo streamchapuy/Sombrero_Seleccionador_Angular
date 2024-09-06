@@ -1,7 +1,7 @@
 .container {
     position: relative;
-    width: 200px;
-    height: 150px;
+    width: 250px;
+    height: 160px;
 }
 
 .container img {
@@ -10,9 +10,9 @@
 }
 
 
-@media (max-width: 1920px) {
+@media (min-width: 1920px) {
     .container {        
-        width: 20rem;
+        width: 25rem;
         height: 15rem;
     }
 }

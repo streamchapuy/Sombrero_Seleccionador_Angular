@@ -1,13 +1,13 @@
-<div class="container" 
-     (mousedown)="startDrag($event)" 
-     (mousemove)="onDrag($event)" 
-     (mouseup)="stopDrag()" 
-     (wheel)="onWhell($event)">
+<div class="nav-bar-container">
+ 
+  <button class="nav-arrow left-arrow" (click)="prevTeam()">&#10094;</button>
   
-  <div *ngFor="let team of teams; let i = index" 
-       class="escuela" 
-       [ngClass]="{'selected': selectedTeam === team}" 
-       (click)="selectTeam(team)">
-    <img class="escuelita" [src]="team" alt="Escudo {{i + 1}}">
+  
+  <div class="school-container">
+    <img class="escuelita" [src]="teams[currentIndex].image" alt="Escudo {{currentIndex + 1}}"
+    (click)="selectTeam(teams[currentIndex])">
   </div>
+  
+
+  <button class="nav-arrow right-arrow" (click)="nextTeam()">&#10095;</button>
 </div>

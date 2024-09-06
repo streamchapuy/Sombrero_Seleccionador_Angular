@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
 import { NavBarComponent } from '../../Components/nav-bar/nav-bar.component';
 import { RuletaComponent } from '../../Components/ruleta/ruleta.component';
 
@@ -23,22 +23,16 @@ export class SorteoComponent {
   selectedSchoolName: string | null = null;
 
   onTeamSelected(team: { name: string, image: string }) {
-    this.selectedSchoolName = team.name; // Consider renaming to selectedTeamName
-    this.selectedTeam = team.name;
-    this.selectedHouse = team.image;
+    this.selectedSchoolName = team.name;
+    this.selectedTeam = team.image;  // Aquí se debe guardar la imagen de la escuela
+    console.log('Escuela seleccionada:', this.selectedTeam);
   }
-
+  
   onHouseSelected(house: string) {
     this.selectedHouse = house;
     this.assignTeamToHouse();
   }
-
-  setRuletaTarget(school: string) {
-    let equipoObjetivo = null;
-    if (school === 'UTN') {
-      equipoObjetivo = 'Slytherin'; // Adjust logic as needed
-    }
-  }
+  
 
   assignTeamToHouse() {
     if (this.selectedTeam && this.selectedHouse) {
@@ -62,6 +56,8 @@ export class SorteoComponent {
       }
 
       this.selectedHouse = null; 
+    } else {
+      console.log('No se ha seleccionado una escuela o una casa.')
     }
   }
 

@@ -12,36 +12,35 @@ export class NavBarComponent {
 
   @Output() teamSelected = new EventEmitter<{name: string, image: string}>();
 
-  teams: string[] = [
-    '../../../assets/Img/Escuelas/Miguel.png',
-    '../../../assets/Img/Escuelas/N°39.png',
-    '../../../assets/Img/Escuelas/N°483.png',
-    '../../../assets/Img/Escuelas/N°552.png',
-    '../../../assets/Img/Escuelas/UTN.png',
-    '../../../assets/Img/Escuelas/UTN(test).png',
-    '../../../assets/Img/Escuelas/N°552 - copia.png',
-    '../../../assets/Img/Escuelas/N°552 - copia (3).png',
-    '../../../assets/Img/Escuelas/N°552 - copia (4).png',
-    '../../../assets/Img/Escuelas/N°552 - copia (5).png',
-    '../../../assets/Img/Escuelas/N°552 - copia (6).png',
-    '../../../assets/Img/Escuelas/N°552 - copia (2).png'
+  teams: {name: string, image: string}[] = [
+    {name: 'Miguel', image:'../../../assets/Img/Escuelas/Miguel.png'},
+    {name: 'N°39', image:'../../../assets/Img/Escuelas/N°39.png'},
+    {name: 'N°483', image:'../../../assets/Img/Escuelas/N°483.png'},
+    {name: 'N°552', image:'../../../assets/Img/Escuelas/N°552.png'},
+    {name: 'UTN', image:'../../../assets/Img/Escuelas/UTN.png'},
+    {name: 'UTN Test', image:'../../../assets/Img/Escuelas/UTN(test).png'},
+    {name: 'copia-1', image:'../../../assets/Img/Escuelas/N°552 - copia (3).png'},
+    {name: 'copia-2', image:'../../../assets/Img/Escuelas/N°552 - copia (4).png'},
+    {name: 'copia-3', image:'../../../assets/Img/Escuelas/N°552 - copia (5).png'},
+    {name: 'copia-4', image:'../../../assets/Img/Escuelas/N°552 - copia (6).png'},
+    {name: 'copia-5', image:'../../../assets/Img/Escuelas/N°552 - copia (2).png'}
   ];
 
-  selectedTeam: string | null = null;
-
-  // Método para seleccionar un equipo
-  selectTeam(team: string) {
-    console.log('Equipo seleccionado:', team);
-    const nameTeam = this.getSchoolNameFromPath(team);
-    this.teamSelected.emit({ name: nameTeam, image: team });
+  currentIndex: number = 0; 
+  selectedTeam: string = this.teams[this.currentIndex].name;
+  selectTeam(team: {name: string, image: string}) {
+    console.log('Equipo seleccionado:', team.name);
+    this.teamSelected.emit(team); 
   }
-
-  // Método para eliminar un equipo
-  removeTeam(team: string) {
-    this.teams = this.teams.filter(t => t !== team);
+  
+  
+  removeTeam(teamName: string) {
+    this.teams = this.teams.filter(team => {
+      return team.name !== teamName;
+    });
   }
-
-  // Inicia el arrastre
+  
+ 
   startDrag(event: MouseEvent) {
     this.isDragging = true;
     const target = event.currentTarget as HTMLElement;
@@ -49,7 +48,7 @@ export class NavBarComponent {
     this.scrollLeft = target.scrollLeft;
   }
 
-  // Realiza el arrastre
+ 
   onDrag(event: MouseEvent) {
     if (!this.isDragging) return;
     const x = event.pageX - this.startX;
@@ -58,19 +57,31 @@ export class NavBarComponent {
     target.scrollLeft = this.scrollLeft - walk;
   }
 
-  // Detiene el arrastre
+
   stopDrag() {
     this.isDragging = false;
   }
 
-  // Maneja el desplazamiento con la rueda del ratón
+  
   onWhell(event: WheelEvent) {
     const target = event.currentTarget as HTMLElement;
     target.scrollLeft += event.deltaY;
     event.preventDefault();
   }
 
-  // Extrae el nombre del equipo desde la ruta de la imagen
+  prevTeam(){
+    this.currentIndex = (this.currentIndex - 1)% this.teams.length;
+    this.selectedTeam = this.teams[this.currentIndex].name;
+  }
+
+  nextTeam() {
+    this.currentIndex = (this.currentIndex + 1) % this.teams.length;
+    this.selectedTeam = this.teams[this.currentIndex].name;
+  }
+
+  
+
+ 
   private getSchoolNameFromPath(path: string): string {
     const fileName = path.split('/').pop() || '';
     const nameWithoutExtension = fileName.replace(/\.[^/.]+$/, "");

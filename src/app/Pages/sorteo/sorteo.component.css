@@ -1,26 +1,28 @@
+
+
 body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    display: flex;    
+    display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../../../assets/Img/Background/Sorteo_Background.jpg);    
+    background-image: url(../../../assets/Img/Background/Sorteo_Background.jpg);
     background-repeat: no-repeat;
-    background-size: cover;    
-    
+    background-size: cover;
+    zoom: 1
+    ;
+
 }
-
-
 
 .container {
     display: grid;
     grid-template-columns: 0.5fr 1.5fr 1.5fr 0.5fr;
-    grid-template-rows: auto auto 0.4fr;     
+    grid-template-rows: auto auto 0.4fr;
     grid-template-areas:
         "Area-uno . . Area-3"
         ". ruleta ruleta ."
-        "Area-2 Bar Bar Area-4";      
+        "Area-2 Bar Bar Area-4";
     cursor: url('../../../assets/LaVaritaDeHarry/VaritaCursorBody.png') 0 0, auto;
     width: 100%;
     height: 100vh;
@@ -28,8 +30,9 @@ body {
     padding: 0;
     z-index: 10;
     overflow: hidden;
-    
+
 }
+
 
 .LetraPotter .HarryFont {
     text-align: center;
@@ -41,23 +44,26 @@ body {
     overflow: hidden;
 }
 
-#sombrero {
-    position: absolute;
-    top: 0px;
-}
 
-.Area-uno, .Area-2, .Area-3, .Area-4 {
+.Area-uno,
+.Area-2,
+.Area-3,
+.Area-4 {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .Area-uno {
-    grid-area: Area-uno;    
+    grid-area: Area-uno;
     width: 100%;
     height: auto;
-    margin-bottom: 90%;  
-    
+    margin-bottom: 90%;
+
+}
+
+.Area-uno #logo {
+    margin-top: 0%;
 }
 
 .Area-uno .Equipo-1 {
@@ -65,7 +71,7 @@ body {
     top: 2.2vh;
     left: 0;
     background-color: #333;
-    padding: 41px 0;
+    padding: 25px 0;
     list-style: none;
     margin: 0;
     border-radius: 10px;
@@ -74,20 +80,17 @@ body {
     height: 5%;
     transition: 1.25s;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: end;
 }
 
 .Area-uno .Equipo-1 li {
-    transition: 1s;
+    transition: 1s ease-in-out;
     width: 80px;
     height: 80px;
-    gap: 10px;
-    overflow: hidden;
-    box-sizing: border-box;
-    gap: 10px;
-    margin-right: 60px;
+    display: flex;
+    justify-content: end;
+
 }
 
 .Area-uno:hover .Equipo-1 {
@@ -95,7 +98,7 @@ body {
     filter: drop-shadow(0 0 15px #ff3b76);
 }
 
-.Area-uno:hover #logo{
+.Area-uno:hover #logo {
     filter: drop-shadow(0 0 15px #ff3b76);
 }
 
@@ -105,12 +108,16 @@ body {
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: flex-end;    
     width: 100%;
-    height: auto;
+    height: 0%;    
+    
 }
 
 .Area-2 #logo-2 {
-    margin-bottom: 15%;
+    margin-bottom: 20px;
+    width: 90px;
+    height: 90px;
 }
 
 
@@ -119,18 +126,17 @@ body {
     bottom: 2vh;
     left: 0;
     background-color: #333;
-    padding: 60px 0;
+    padding: 45px 0;
     list-style: none;
     margin: 0;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     width: 0;
-    height: 5%;
     transition: 1.25s;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: end;
+
 }
 
 .Area-2:hover #logo-2 {
@@ -139,21 +145,18 @@ body {
 
 
 .Area-2 .Equipo-2 li {
-    margin-right: 60px;
-    transform: translateX(-200px);
     transition: 1s ease-in-out;
     width: 80px;
     height: 80px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    overflow: hidden;
+    justify-content: end;
+
 }
 
 .Area-2:hover .Equipo-2 {
     width: 30vw;
     filter: drop-shadow(0 0 15px #fffb00);
+    position: absolute;
 }
 
 .Area-3 {
@@ -168,22 +171,32 @@ body {
 }
 
 .Area-3 .equipo-3 {
-    translate: 100%;    
+    translate: 100%;
     position: absolute;
     top: 0;
     left: 0;
     background-color: #333;
-    padding: 30px 0;
+    padding: 20px 0;
     list-style: none;
     margin: 0;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    width: 50vw;
+    width: 56vw;
     height: 20%;
     transition: 1.25s;
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
+    justify-content: start;
+    align-items: center;
+}
+
+.Area-3 .equipo-3 li {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: end;
+    transition: 1s ease-in-out;
+    align-items: center;
+    margin-left: 30%;
 }
 
 .Area-3:hover .equipo-3 {
@@ -192,39 +205,56 @@ body {
 }
 
 .Area-3 #logo-3 {
-    margin-bottom: 100%;
+    margin-bottom: 90%;
 }
 
 .Area-4 {
     grid-area: Area-4;
     position: relative;
     display: flex;
+    justify-content: center;
+    align-items: end;
     width: 100%;
-    height: auto;    
+    height: 0;
 }
 
 .Area-4 #logo-4 {
-    margin-bottom: 15%;
+    margin-bottom: 20px;
+    width: 90px;
+    height: 90px;
 }
 
 
+
+
 .Area-4 .equipo-4 {
-    translate: 100%;    
+    translate: 100%;
     position: absolute;
     bottom: 2vh;
     left: 0;
     background-color: #333;
-    padding: 48px 0;
+    padding: 45px 0;
     list-style: none;
     margin: 0;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    width: 50vw;
-    height: 20%;
+    width: 56vw;
+    height: 10%;
     transition: 1.25s;
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
+    justify-content: start;
+    align-items: center;
+    margin-left: 30%;
+}
+
+.Area-4 .equipo-4 li {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: end;
+    transition: 1s ease-in-out;
+    align-items: center;
+    margin-left: 30%;
 }
 
 .Area-4:hover .equipo-4 {
@@ -239,11 +269,7 @@ body {
     justify-content: center;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    min-height: 90%;
-    max-height: 90%;
-    margin: 0;   
-    
+
 }
 
 .Bar {
@@ -251,106 +277,198 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10%;
+
 }
 
 app-sombrero {
-    position: absolute; 
-    top: -115%; 
-    left: 50%; 
-    transform: translateX(-50%);
-    z-index: 10;        
+    margin-top: -20%;
 }
-
-
 
 .Area-uno img,
 .Area-2 img,
 .Area-3 img,
 .Area-4 img {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     z-index: 10;
 }
 
 ul li img {
-    width: 100px;   
+    width: 80px;
+    height: 80px;
 }
-@media (max-width: 1920px) {
+
+@media (min-width: 1920px) {
 
     .container {
         display: grid;
         grid-template-columns: 0.5fr 1.5fr 1.5fr 0.5fr;
-        grid-template-rows: auto auto 0.4fr;     
+        grid-template-rows: auto auto 0.4fr;
         grid-template-areas:
             "Area-uno . . Area-3"
             ". ruleta ruleta ."
-            "Area-2 Bar Bar Area-4";      
+            "Area-2 Bar Bar Area-4";
         cursor: url('../../../assets/LaVaritaDeHarry/VaritaCursorBody.png') 0 0, auto;
         width: 100%;
         height: 100vh;
         margin: 0;
         padding: 0;
         z-index: 10;
-        overflow: hidden;       
-        
     }
 
     app-sombrero {
-        position: absolute; /* Posiciona el sombrero en relación con la ruleta */
-        top: -55%; /* Ajusta este valor según la altura del sombrero y ruleta */
-        left: 50%; /* Centra el sombrero horizontalmente */
-        transform: translateX(-50%); /* Ajuste fino para centrar exactamente */
-        z-index: 10;     
-        
+        position: absolute;
+        top: 18%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+
     }
 
     .ruleta {
-        grid-area: ruleta;        
+        grid-area: ruleta;
         width: 100%;
         min-height: 90%;
         max-height: 90%;
-        margin: 0;  
-        align-items: center; 
-        
+        margin: 0;
+        align-items: center;
+
     }
-    
-    .Area-uno img  {
-        width: 100px;
-        height: 100px;
+
+    .Area-uno {
+        grid-area: Area-uno;
+        width: 100%;
+        height: auto;
+        margin-bottom: 90%;    
+    }
+    .Area-uno img {
+        width: 200px;
+        height: 150px;
         z-index: 10;
-       margin-top: 10%;
-       margin-right: 40%;
+        margin-top: 10%;
+        margin-right: 40%;
     }
 
-    .Area-2 img  {
-        width: 100px;
-        height: 100px;
-        z-index: 10;      
-       margin-right: 40%;
+    .Area-uno .Equipo-1 {
+        position: absolute;
+        top: 2.2vh;
+        left: 0;
+        background-color: #333;
+        padding: 50px 0;
+        list-style: none;
+        margin: 0;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        width: 0%;
+        height: 5%;
+        transition: 1.25s;
+        display: flex;
+        align-items: center;
+        justify-content: end;
     }
-
-   .Area-3 img {
-    width: 100px;
-    height: 100px;
-    z-index: 10;
-    margin-top: 5%;
-    margin-left: 40%;
-   }
-
-   .Area-4 img {
-    width: 100px;
-    height: 100px;
-    z-index: 10;    
-    margin-left: 40%;
-   }
-
     
-
     
-
+.Area-2 {
+    grid-area: Area-2;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;    
+    width: 100%;
+    height: 0%;  
+    margin-bottom: -100%;  
     
 }
+
+    .Area-2 #logo-2 {
+        width: 150px;
+        height: 150px;
+        z-index: 10;
+        margin-right: 40%;
+        margin-bottom: 10%;
+
+    }
+
+    .Area-3 img {
+        width: 150px;
+        height: 150px;
+        z-index: 10;
+        margin-top: -2%;
+        margin-left: 40%;
+    }
+
+    .Area-3 .equipo-3 {
+        translate: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #333;
+        padding: 36px 0;
+        list-style: none;
+        margin: 0;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        width: 56vw;
+        height: 20%;
+        transition: 1.25s;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .Area-4 #logo-4 {
+        width: 150px;
+        height: 150px;
+        z-index: 10;
+        margin-left: 40%;
+    }
+
+    .Area-4 .equipo-4 {
+        translate: 100%;
+        position: absolute;
+        bottom: 2vh;
+        left: 0;
+        background-color: #333;
+        padding: 65px 0;
+        list-style: none;
+        margin: 0;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        width: 56vw;
+        height: 10%;
+        transition: 1.25s;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-left: 30%;
+    }
+
+    .Area-2 .Equipo-2 {
+        position: absolute;
+        bottom: 2vh;
+        left: 0;
+        background-color: #333;
+        padding: 75px 0;
+        list-style: none;
+        margin: 0;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        width: 0;
+        transition: 1.25s;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+
+
+
+
+
+
+}
+
+
+
 
 
 
@@ -363,11 +481,16 @@ ul li img {
             "Area-2"
             "Area-3"
             "Area-4"
-            "Bar"; 
+            "Bar";
         height: auto;
     }
 
-    .Area-uno, .Area-2, .Area-3, .Area-4, .ruleta, .Bar {
+    .Area-uno,
+    .Area-2,
+    .Area-3,
+    .Area-4,
+    .ruleta,
+    .Bar {
         width: 100%;
         padding: 10px;
     }
