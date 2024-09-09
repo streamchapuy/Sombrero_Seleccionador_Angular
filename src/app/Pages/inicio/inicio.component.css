@@ -92,28 +92,52 @@
     margin-top: -18%;
 }
 
-
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
-}
-
-#Volumen {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    margin-left: 75%;    
-}
-
-input[type="range"] {
-    width: 55%;    
-    background: #0e0c0c;
-    border-radius: 50%;
-    outline: #0e0c0c;
-    
-}
-
-
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+    color: #d0bb00;
+    font-size: 60px;
+    cursor: pointer;
+  }
+  
+  #Volumen {
+      position: absolute;
+      display: flex;
+      top: 85dvh;
+      flex-direction: row;
+      justify-content: start;
+      margin-right: 3.5dvw;    
+  }
+  
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 10rem;
+  }
+  
+  input[type="range"]::-webkit-slider-runnable-track {
+    background-color: #b0b0b0;
+    border-radius: 16rem;
+    height: 0.5rem;
+  }
+  
+  
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: -4px;
+    background-color: #d0bb00;
+    border-radius: 5rem;
+    height: 1rem;
+    width: 1rem;
+  }
+  
+  input[type="range"]:focus::-webkit-slider-thumb {
+    outline: 3px solid #d0bb00;
+    outline-offset: 0.125rem;
+  }

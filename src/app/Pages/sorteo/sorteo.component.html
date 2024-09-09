@@ -1,34 +1,35 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <body>
   <div class="container">
     <div class="Area-uno">
       <img id="logo" src="../../../assets/Img/Casas/IA-1.png">
       <ul class="Equipo-1">        
-        <li *ngFor="let equipo of equiposPorCasa['Gryffindor']">
-          <img [src]="equipo">
+        <li>
+          <img *ngFor="let equipo of equiposPorCasa['Gryffindor']" [src]="equipo">
         </li>
       </ul>
     </div>
     <div class="Area-2">
       <img id="logo-2" src="../../../assets/Img/Casas/HafflePuff.png" alt="">
       <ul class="Equipo-2">        
-        <li *ngFor="let equipo of equiposPorCasa['Hufflepuff']">
-          <img [src]="equipo">
+        <li>
+          <img *ngFor="let equipo of equiposPorCasa['Hufflepuff']" [src]="equipo">
         </li>
       </ul>
     </div>
     <div class="Area-3">
       <img id="logo-3" src="../../../assets/Img/Casas/Ravenclaw Png.png" alt="">
       <ul class="equipo-3">       
-        <li *ngFor="let equipo of equiposPorCasa['Ravenclaw']">
-          <img [src]="equipo">
+        <li>
+          <img *ngFor="let equipo of equiposPorCasa['Ravenclaw']" [src]="equipo">
         </li>
       </ul>
     </div>
     <div class="Area-4">
       <img id="logo-4" src="../../../assets/Img/Casas/Slytherin-png.png" alt="">
       <ul class="equipo-4">       
-        <li *ngFor="let equipo of equiposPorCasa['Slytherin']">
-          <img [src]="equipo">
+        <li>
+          <img *ngFor="let equipo of equiposPorCasa['Slytherin']" [src]="equipo">
         </li>
       </ul>
     </div>
@@ -38,6 +39,20 @@
     </div>
     <div class="Bar">
       <app-nav-bar (teamSelected)="onTeamSelected($event)"></app-nav-bar>
+      <div id="Volumen">
+        <span class="material-symbols-outlined" (click)="playSound()">
+            volume_mute
+            </span>
+        <label for="volumen"></label>
+        <input
+        id="volumen"
+        type="range"
+        min="0"
+        max="5"
+        step="0.01"
+        [value]="volume"
+        (input)="changeVolumen($event)">
+    </div>
     </div>
   </div>
 </body>

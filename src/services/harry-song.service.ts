@@ -13,6 +13,7 @@ export class HarrySongService {
     
     this.audio.src = audioUrl; 
     this.audio.load();
+    this.audio.loop = true;
     this.audio.play().catch(error => {
       console.error('Error al reproducir el audio:', error);
     });

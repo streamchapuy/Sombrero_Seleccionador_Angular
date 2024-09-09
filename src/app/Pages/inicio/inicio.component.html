@@ -4,7 +4,7 @@
     <div class="Componente"> 
         <div class="Blur">
             <div class="HarryStyles"><p class="HarryFontArriba">!!!Bienvenidos!!!</p></div>
-            <div class="Escudo"(click)="playSound()"><img class="EscudoInicio" src="../../../assets/Img/Logos/InicioLogo/HogwartsLogo.png" alt="Escudo de Inicio">
+            <div class="Escudo"><img class="EscudoInicio" src="../../../assets/Img/Logos/InicioLogo/HogwartsLogo.png" alt="Escudo de Inicio">
             </div>    
             <div class="HarryStyles"><p class="HarryFontAbajo">!!!Al septimo encuentro tecnologico!!!</p>
             </div>    
@@ -12,7 +12,7 @@
                 <button id="IniciarSorteo" class="HarryFontBoton" (click)="iniciarSorteo('sorteo')">Iniciar Sorteo</button>
             </div>
             <div id="Volumen">
-                <span class="material-symbols-outlined">
+                <span class="material-symbols-outlined" (click)="playSound()">
                     volume_mute
                     </span>
                 <label for="volumen"></label>

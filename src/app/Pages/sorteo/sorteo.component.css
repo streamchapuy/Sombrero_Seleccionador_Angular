@@ -71,7 +71,7 @@ body {
     top: 2.2vh;
     left: 0;
     background-color: #333;
-    padding: 25px 0;
+    padding: 25px 0px;
     list-style: none;
     margin: 0;
     border-radius: 10px;
@@ -80,17 +80,18 @@ body {
     height: 5%;
     transition: 1.25s;
     display: flex;
+    justify-content: start;
     align-items: center;
-    justify-content: end;
 }
 
 .Area-uno .Equipo-1 li {
     transition: 1s ease-in-out;
     width: 80px;
     height: 80px;
+    margin-bottom: 10px;
     display: flex;
-    justify-content: end;
-
+    justify-content: flex-end;
+    margin-right: 10%;
 }
 
 .Area-uno:hover .Equipo-1 {
@@ -131,11 +132,12 @@ body {
     margin: 0;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    width: 0;
+    width: 0%;
+    height: 5%;
     transition: 1.25s;
     display: flex;
+    justify-content: start;
     align-items: center;
-    justify-content: end;
 
 }
 
@@ -149,8 +151,9 @@ body {
     width: 80px;
     height: 80px;
     display: flex;
-    justify-content: end;
-
+    justify-content: flex-end;
+    margin-right: 10%;
+    gap: 2.5vw;
 }
 
 .Area-2:hover .Equipo-2 {
@@ -163,8 +166,8 @@ body {
     grid-area: Area-3;
     position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; 
+    align-items: flex-end; 
     width: 100%;
     height: auto;
     margin-top: 10%;
@@ -173,30 +176,32 @@ body {
 .Area-3 .equipo-3 {
     translate: 100%;
     position: absolute;
-    top: 0;
+    bottom: 2vh;
     left: 0;
     background-color: #333;
-    padding: 20px 0;
+    padding: 45px 0;
     list-style: none;
     margin: 0;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     width: 56vw;
-    height: 20%;
+    height: 10%;
     transition: 1.25s;
     display: flex;
     justify-content: start;
-    align-items: center;
+    align-items: start;
+    margin-left: 30%;
 }
 
 .Area-3 .equipo-3 li {
     width: 80px;
     height: 80px;
-    display: flex;
-    justify-content: end;
     transition: 1s ease-in-out;
-    align-items: center;
     margin-left: 30%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    gap: 2vw;
 }
 
 .Area-3:hover .equipo-3 {
@@ -213,7 +218,7 @@ body {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
     width: 100%;
     height: 0;
 }
@@ -223,9 +228,6 @@ body {
     width: 90px;
     height: 90px;
 }
-
-
-
 
 .Area-4 .equipo-4 {
     translate: 100%;
@@ -243,18 +245,19 @@ body {
     transition: 1.25s;
     display: flex;
     justify-content: start;
-    align-items: center;
+    align-items: start;
     margin-left: 30%;
 }
 
 .Area-4 .equipo-4 li {
     width: 80px;
     height: 80px;
-    display: flex;
-    justify-content: end;
     transition: 1s ease-in-out;
-    align-items: center;
     margin-left: 30%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    gap: 3vw;
 }
 
 .Area-4:hover .equipo-4 {
@@ -297,6 +300,56 @@ ul li img {
     width: 80px;
     height: 80px;
 }
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+    color: #d0bb00;
+    font-size: 60px;
+    cursor: pointer;
+  }
+  
+  #Volumen {
+      position: absolute;
+      display: flex;
+      top: 4dvh;
+      flex-direction: row;
+      justify-content: start;
+      margin-right: 3.5dvw;    
+  }
+  
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 10rem;
+  }
+  
+  input[type="range"]::-webkit-slider-runnable-track {
+    background-color: #b0b0b0;
+    border-radius: 16rem;
+    height: 0.5rem;
+  }
+  
+  
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: -4px;
+    background-color: #d0bb00;
+    border-radius: 5rem;
+    height: 1rem;
+    width: 1rem;
+  }
+  
+  input[type="range"]:focus::-webkit-slider-thumb {
+    outline: 3px solid #d0bb00;
+    outline-offset: 0.125rem;
+  }
 
 @media (min-width: 1920px) {
 
@@ -348,7 +401,7 @@ ul li img {
         margin-top: 10%;
         margin-right: 40%;
     }
-
+    
     .Area-uno .Equipo-1 {
         position: absolute;
         top: 2.2vh;
@@ -367,17 +420,33 @@ ul li img {
         justify-content: end;
     }
     
-    
-.Area-2 {
-    grid-area: Area-2;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;    
-    width: 100%;
-    height: 0%;  
-    margin-bottom: -100%;  
-    
+    .Area-2 .Equipo-2 {
+        position: absolute;
+        bottom: 2vh;
+        left: 0;
+        background-color: #333;
+        padding: 75px 0;
+        list-style: none;
+        margin: 0;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        width: 0;
+        transition: 1.25s;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+
+    .Area-2 {
+        grid-area: Area-2;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;    
+        width: 100%;
+        height: 0%;  
+        margin-bottom: -100%;  
+        
 }
 
     .Area-2 #logo-2 {
@@ -416,6 +485,17 @@ ul li img {
         align-items: center;
     }
 
+    .Area-3 .equipo-3 li {
+        width: 80px;
+        height: 80px;
+        transition: 1s ease-in-out;
+        margin-left: 30%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        gap: 2vw;
+    }
+
     .Area-4 #logo-4 {
         width: 150px;
         height: 150px;
@@ -443,21 +523,15 @@ ul li img {
         margin-left: 30%;
     }
 
-    .Area-2 .Equipo-2 {
-        position: absolute;
-        bottom: 2vh;
-        left: 0;
-        background-color: #333;
-        padding: 75px 0;
-        list-style: none;
-        margin: 0;
-        border-radius: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        width: 0;
-        transition: 1.25s;
+    .Area-4 .equipo-4 li {
+        width: 80px;
+        height: 80px;
+        transition: 1s ease-in-out;
+        margin-left: 30%;
         display: flex;
-        align-items: center;
-        justify-content: end;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        gap: 3vw;
     }
 
 
@@ -465,12 +539,8 @@ ul li img {
 
 
 
+
 }
-
-
-
-
-
 
 @media (max-width: 768px) {
     .container {
