@@ -13,13 +13,13 @@ export class NavBarComponent {
   @Output() teamSelected = new EventEmitter<{name: string, image: string}>();
 
   teams: {name: string, image: string}[] = [
-    {name: 'Miguel', image:'../../../assets/Img/Escuelas/Miguel.png'},
-    {name: 'N°39', image:'../../../assets/Img/Escuelas/N°39.png'},
+    {name: 'N°602', image:'../../../assets/Img/Escuelas/Nº602.png'},
     {name: 'N°483', image:'../../../assets/Img/Escuelas/N°483.png'},
+    {name: 'N°39', image:'../../../assets/Img/Escuelas/N°39.png'},
     {name: 'N°552', image:'../../../assets/Img/Escuelas/N°552.png'},
+    {name: 'N°281', image:'../../../assets/Img/Escuelas/Nº281.png'},
+    {name: 'Miguel', image:'../../../assets/Img/Escuelas/Miguel.png'},
     {name: 'UTN', image:'../../../assets/Img/Escuelas/UTN.png'},
-    {name: 'UTN Test', image:'../../../assets/Img/Escuelas/UTN(test).png'},
-    {name: 'copia-1', image:'../../../assets/Img/Escuelas/N°552 - copia (3).png'},
     {name: 'copia-2', image:'../../../assets/Img/Escuelas/N°552 - copia (4).png'},
     {name: 'copia-3', image:'../../../assets/Img/Escuelas/N°552 - copia (5).png'},
     {name: 'copia-4', image:'../../../assets/Img/Escuelas/N°552 - copia (6).png'},

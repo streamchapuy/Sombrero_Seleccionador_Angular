@@ -13,6 +13,7 @@ export class RuletaComponent {
   anguloActual = 0;
   showBubble = false;
   casaSeleccionada: string = '';
+  equipoObjetivo: string |null = null;
 
   @Output() houseSelected = new EventEmitter<string>();
 
@@ -26,10 +27,11 @@ export class RuletaComponent {
     console.log('Ruleta girando');
     this.isSpinning = true;
     this.showBubble = true; 
-    this.casaSeleccionada = 'mmmm...'; 
+    this.casaSeleccionada = 'mmm...'; 
 
     const girosCompletos = 5;
-    const anguloFinal = Math.floor(Math.random() * 360);
+    // const anguloFinal = Math.floor(Math.random() * 360);
+    const anguloFinal = this.calcularAnguloObjetivo();
     const rotacionTotal = girosCompletos * 360 + anguloFinal;
 
     this.anguloActual += rotacionTotal;
@@ -49,6 +51,15 @@ export class RuletaComponent {
       }, 2000);
 
     }, this.tiempoGiro * 1000); 
+  }
+
+  calcularAnguloObjetivo():number{
+    if (!this.equipoObjetivo) {
+      return Math.floor(Math.random()*360)
+    }
+    const index = this.casas.indexOf(this.equipoObjetivo);
+    const anguloPorCasa = 360/this.casas.length;
+    return anguloPorCasa*index;
   }
 
   calcularCasa(angulo: number) {

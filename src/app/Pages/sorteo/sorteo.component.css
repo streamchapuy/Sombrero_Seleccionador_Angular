@@ -63,7 +63,7 @@ body {
 }
 
 .Area-uno #logo {
-    margin-top: 0%;
+    margin-top: 25px;
 }
 
 .Area-uno .Equipo-1 {
@@ -173,6 +173,10 @@ body {
     margin-top: 10%;
 }
 
+.Area-3:hover #logo-3{
+    filter: drop-shadow(0 0 15px #00d5ff);
+}
+
 .Area-3 .equipo-3 {
     translate: 100%;
     position: absolute;
@@ -223,8 +227,12 @@ body {
     height: 0;
 }
 
+.Area-4:hover #logo-4{
+    filter: drop-shadow(0 0 15px #26ff00);
+}
+
 .Area-4 #logo-4 {
-    margin-bottom: 20px;
+    margin-bottom: 13px;
     width: 90px;
     height: 90px;
 }
