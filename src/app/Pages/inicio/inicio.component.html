@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    
+    <div class="Componente"> 
+        <div class="Blur">
+            <div class="HarryStyles"><p class="HarryFontArriba">!!!BIENVENIDOS!!!</p></div>
+            <div class="Escudo"><img class="EscudoInicio" src="../../../assets/Img/Logos/InicioLogo/HogwartsLogo.png" alt="Escudo de Inicio">
+            </div>    
+            <div class="HarryStyles"><p class="HarryFontAbajo">!!!Al VII ENCUENTRO TECNOLOGICO!!!</p>
+            </div>    
+            <div class="ContenedorBoton">
+                <button id="IniciarSorteo" class="HarryFontBoton" (click)="iniciarSorteo('sorteo')">Iniciar Sorteo</button>
+            </div>
+            <div id="Volumen">
+                <span class="material-symbols-outlined" (click)="playSound()">
+                    volume_mute
+                    </span>
+                <label for="volumen"></label>
+                <input
+                id="volumen"
+                type="range"
+                min="0"
+                max="5"
+                step="0.01"
+                [value]="volume"
+                (input)="changeVolumen($event)">
+            </div>
+            </div>
+        </div> 

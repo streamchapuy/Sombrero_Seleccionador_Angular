@@ -1,0 +1,144 @@
+@media (min-width: 1280px) {
+    .componente {
+        grid-template-columns: 0.3fr 2fr 2fr 0.3fr;
+        grid-template-rows: 0.3fr 2.5fr 0.3fr;
+    }
+}
+
+.Componente {
+    background-image: url('../../../assets/Img/Background/Inicio_Background.jpg');
+    background-size: cover;
+    background-position: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap; 
+    height: 100vh;
+    cursor: url('../../../assets/LaVaritaDeHarry/VaritaCursorBody.png') 0 0 ,auto;
+    overflow-y: hidden;
+}
+
+.Blur {
+    width: 50%;
+    height: 100vh;
+    backdrop-filter: blur(4px);
+    background-color: rgba(100, 100, 100, 0.169);
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    align-content: center;
+    align-items: start;
+    
+}
+
+.EscudoInicio{
+    width: 300px;
+    height: 400px;
+    margin-bottom: 80%;
+}
+
+@font-face {
+    font-family: HarryPotter;
+    src: url('../../../assets/Font/HARRYP__.TTF');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.HarryFontArriba {
+    font-family: HarryPotter;
+    font-size: 96px;
+    color: #d0bb00;
+    margin-bottom: -20%;
+    padding-top: 20%;
+    padding-bottom: 10%;
+}
+
+.HarryFontAbajo {
+    font-family: HarryPotter;
+    font-size: 66px;
+    color: #d0bb00;
+    margin-top: -20%;
+}
+
+.HarryFontBoton {
+    font-family: HarryPotter;
+    font-size: 56px;
+    color: #d0bb00;
+}
+
+#IniciarSorteo {
+    background-color: #d0bb00;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 26px;
+    margin: 4px 2px;
+    cursor: url('../../../assets/LaVaritaDeHarry/VaritaCursorLeft.png') 0 0 ,auto;
+    border-radius: 65px;
+}
+
+#IniciarSorteo:hover{
+    background-color: #f6cd00;
+}
+
+.HarryStyles {
+    text-shadow: #0093d2 0 0 20px;
+    margin-top: -60px;
+}
+
+.ContenedorBoton {
+    padding-bottom: 60px;
+    margin-top: -18%;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+    color: #d0bb00;
+    font-size: 60px;
+    cursor: pointer;
+  }
+  
+  #Volumen {
+      position: absolute;
+      display: flex;
+      top: 85dvh;
+      flex-direction: row;
+      justify-content: start;
+      margin-right: 3.5dvw;    
+  }
+  
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 10rem;
+  }
+  
+  input[type="range"]::-webkit-slider-runnable-track {
+    background-color: #b0b0b0;
+    border-radius: 16rem;
+    height: 0.5rem;
+  }
+  
+  
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: -4px;
+    background-color: #d0bb00;
+    border-radius: 5rem;
+    height: 1rem;
+    width: 1rem;
+  }
+  
+  input[type="range"]:focus::-webkit-slider-thumb {
+    outline: 3px solid #d0bb00;
+    outline-offset: 0.125rem;
+  }
