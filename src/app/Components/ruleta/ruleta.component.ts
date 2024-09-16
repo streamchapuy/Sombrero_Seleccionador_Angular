@@ -14,6 +14,7 @@ export class RuletaComponent {
   showBubble = false;
   casaSeleccionada: string = '';
   equipoObjetivo: string |null = null;
+  primerTiro: boolean = true;
 
   @Output() houseSelected = new EventEmitter<string>();
 
@@ -23,15 +24,19 @@ export class RuletaComponent {
     if (this.isSpinning) {
       return;
     }
-
+    
     console.log('Ruleta girando');
     this.isSpinning = true;
     this.showBubble = true; 
     this.casaSeleccionada = 'mmm...'; 
 
-    const girosCompletos = 5;
+    const girosCompletos = 6;
     // const anguloFinal = Math.floor(Math.random() * 360);
-    const anguloFinal = this.calcularAnguloObjetivo();
+    let anguloFinal = this.calcularAnguloObjetivo();
+    if (this.primerTiro) {
+     anguloFinal=30;
+     this.primerTiro=false; 
+    }
     const rotacionTotal = girosCompletos * 360 + anguloFinal;
 
     this.anguloActual += rotacionTotal;
