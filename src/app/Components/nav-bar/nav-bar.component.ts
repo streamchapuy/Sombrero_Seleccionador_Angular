@@ -20,10 +20,14 @@ export class NavBarComponent {
     {name: 'N°281', image:'../../../assets/Img/Escuelas/Nº281.png'},
     {name: 'N°483', image:'../../../assets/Img/Escuelas/N°483.png'},
     {name: 'N°39', image:'../../../assets/Img/Escuelas/N°39.png'},
-    {name: 'N°244', image:'../../../assets/Img/Escuelas/Miguel.png'},
+    {name: 'Miguel', image:'../../../assets/Img/Escuelas/Miguel.png'},
     {name: 'N°584', image:'../../../assets/Img/Escuelas/N°584.png'},
     {name: 'N°238', image:'../../../assets/Img/Escuelas/N°238.png'},
     {name: 'N°552', image:'../../../assets/Img/Escuelas/N°552.png'},
+    {name: 'N°8092', image:'../../../assets/Img/Escuelas/Nº8092.png'},
+    {name: 'Nº402', image: '../../../assets/Img/Escuelas/Nº402.png'},
+    {name: 'Nº244', image: '../../../assets/Img/Escuelas/N°244.png'}
+
   ];
 
   currentIndex: number = 0; 

@@ -95,7 +95,7 @@ body {
 }
 
 .Area-uno:hover .Equipo-1 {
-    width: 30vw;
+    width: 40vw;
     filter: drop-shadow(0 0 15px #ff3b76);
 }
 
@@ -157,7 +157,7 @@ body {
 }
 
 .Area-2:hover .Equipo-2 {
-    width: 30vw;
+    width: 40vw;
     filter: drop-shadow(0 0 15px #fffb00);
     position: absolute;
 }
@@ -188,12 +188,12 @@ body {
     margin: 0;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    width: 56vw;
+    width: 66vw;
     height: 10%;
     transition: 1.25s;
     display: flex;
-    justify-content: start;
-    align-items: start;
+    justify-content: end;
+    align-items: end;
     margin-left: 30%;
 }
 
@@ -202,6 +202,7 @@ body {
     height: 80px;
     transition: 1s ease-in-out;
     margin-left: 30%;
+    padding-left: 10%;
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-start;
@@ -209,7 +210,7 @@ body {
 }
 
 .Area-3:hover .equipo-3 {
-    translate: -30%;
+    translate: -40%;
     filter: drop-shadow(0 0 15px #00d5ff);
 }
 
@@ -248,12 +249,12 @@ body {
     margin: 0;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    width: 56vw;
+    width: 66vw;
     height: 10%;
     transition: 1.25s;
     display: flex;
-    justify-content: start;
-    align-items: start;
+    justify-content: end;
+    align-items: end;
     margin-left: 30%;
 }
 
@@ -262,6 +263,7 @@ body {
     height: 80px;
     transition: 1s ease-in-out;
     margin-left: 30%;
+    padding-left: 10%;
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-start;
@@ -269,7 +271,7 @@ body {
 }
 
 .Area-4:hover .equipo-4 {
-    translate: -40%;
+    translate: -50%;
     filter: drop-shadow(0 0 15px #26ff00);
 }
 
