@@ -43,7 +43,7 @@ export class SorteoComponent {
     if (this.selectedTeam && this.selectedHouse) {
       const houseTeams = this.equiposPorCasa[this.selectedHouse];
 
-      if (houseTeams.length < 3) {
+      if (houseTeams.length < 4) {
         if (!houseTeams.includes(this.selectedTeam)) {
           houseTeams.push(this.selectedTeam);
           this.updateTeamList();
