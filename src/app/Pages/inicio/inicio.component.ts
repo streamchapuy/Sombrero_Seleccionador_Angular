@@ -23,7 +23,7 @@ ngOnInit(): void{
 
   playSound(){
     const audioUrl = 'assets/music/harrySong.MP3';
-    this.HarrySongService.playAudio("../../../assets/HarrySong/harrySong.MP3");
+    this.HarrySongService.playAudio("../../../assets/HarrySong/HarrySongUno.MP3");
   }
 
   changeVolumen(event: Event) {

@@ -43,7 +43,7 @@ export class SorteoComponent {
     if (this.selectedTeam && this.selectedHouse) {
       const houseTeams = this.equiposPorCasa[this.selectedHouse];
 
-      if (houseTeams.length < 4 || houseTeams.length == 3) {
+      if (houseTeams.length < 3) {
         if (!houseTeams.includes(this.selectedTeam)) {
           houseTeams.push(this.selectedTeam);
           this.updateTeamList();
@@ -71,8 +71,8 @@ export class SorteoComponent {
   }
 
   playSound(){
-    const audioUrl = 'src\assets\HarrySong\HarrySongMetal.MP3';
-    this.HarrySongService.playAudio("src\assets\HarrySong\HarrySongMetal.MP3");
+    const audioUrl = 'assets/music/harrySong.MP3';
+    this.HarrySongService.playAudio("../../../assets/HarrySong/HarrySongMetal.MP3");
   }
 
   changeVolumen(event: Event) {
