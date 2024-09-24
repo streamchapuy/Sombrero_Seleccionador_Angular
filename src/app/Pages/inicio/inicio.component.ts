@@ -9,7 +9,7 @@ import { HarrySongService } from '../../../services/harry-song.service';
 })
 export class InicioComponent implements OnInit {
 
-  volume: number = 0.1;
+  volume: number = 0.5;
 
   constructor(private router: Router, private HarrySongService: HarrySongService ) {}
 
@@ -17,6 +17,11 @@ ngOnInit(): void{
     this.playSound();
 }
   iniciarSorteo(url: string) {   
+    this.playSound() 
+    this.router.navigate([url]);
+  }
+
+  puntuaciones(url: string) {   
     this.playSound() 
     this.router.navigate([url]);
   }

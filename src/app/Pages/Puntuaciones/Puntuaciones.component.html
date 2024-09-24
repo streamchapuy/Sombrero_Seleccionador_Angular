@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <div  class="container">
+    <div class="banderin"><img src="../../../assets/Img/Casas/Banderin Gryffindor.png" alt="Gryffindor"></div>
+    <div class="banderin"><img src="../../../assets/Img/Casas/Banderin Hufflepuff.png" alt="Hufflepuff"></div>
+    <div class="banderin"><img src="../../../assets/Img/Casas/Banderin Ravenclaw.jpg" alt="Ravenclaw"></div>
+    <div class="banderin"><img src="../../../assets/Img/Casas/Banderin Slytherin.png" alt="Slytherin"></div>
+  </div>
+  <div id="Volumen">
+    <span class="material-symbols-outlined" (click)="playSound()">
+        volume_mute
+        </span>
+    <label for="volumen"></label>
+    <input
+    id="volumen"
+    type="range"
+    min="0"
+    max="5"
+    step="0.01"
+    [value]="volume"
+    (input)="changeVolumen($event)">
+</div>

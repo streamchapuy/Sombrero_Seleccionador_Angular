@@ -15,17 +15,19 @@ export class NavBarComponent {
   teams: {name: string, image: string}[] = [
     {name: 'N°602', image:'../../../assets/Img/Escuelas/Nº602.png'},
     {name: 'N°206', image:'../../../assets/Img/Escuelas/N°206.png'},
-    {name: 'N°1552', image:'../../../assets/Img/Escuelas/N°1552.png'},
     {name: 'N°281', image:'../../../assets/Img/Escuelas/Nº281.png'},
+    {name: 'N°1552', image:'../../../assets/Img/Escuelas/N°1552.png'},
     {name: 'N°483', image:'../../../assets/Img/Escuelas/N°483.png'},
     {name: 'N°584', image:'../../../assets/Img/Escuelas/N°584.png'},
-    {name: 'N°228', image:'../../../assets/Img/Escuelas/N°228.png'},
-    {name: 'N°8092', image:'../../../assets/Img/Escuelas/Nº8092.png'},
     {name: 'N°39', image:'../../../assets/Img/Escuelas/N°39.png'},
+    {name: 'N°228', image:'../../../assets/Img/Escuelas/N°228.png'},
     {name: 'Nº402', image: '../../../assets/Img/Escuelas/Nº402.png'},
+    {name: 'N°8092', image:'../../../assets/Img/Escuelas/Nº8092.png'},
     {name: 'Nº484', image: '../../../assets/Img/Escuelas/Nº484.png'},
     {name: 'Nº368', image: '../../../assets/Img/Escuelas/Nº368.png'},
-    {name: 'Nº447', image: '../../../assets/Img/Escuelas/Nº447.png'}
+    {name: 'Corazon', image: '../../../assets/Img/Escuelas/Corazon.png'},
+    {name: 'Nº447', image: '../../../assets/Img/Escuelas/Nº447.png'},
+    {name: 'Nº317', image: '../../../assets/Img/Escuelas/Nº317.png'},
   ];
 
   currentIndex: number = 0; 
