@@ -8,12 +8,12 @@
   <div class="selector-score">
     <button class="nav-arrow left-arrow" (click)="EquipoAnterior()">&#10094;</button>
     <div *ngIf="selectedTeamIndex !== undefined">
-      <img [src]="Casas[selectedTeamIndex].logo" [alt]="Casas[selectedTeamIndex].name" class="casa-logo">
+      <img [src]="Casas[selectedTeamIndex].logo" [alt]="Casas[selectedTeamIndex].name" class="casaPunto">
     </div>
     <button class="nav-arrow right-arrow" (click)="EquipoSiguiente()">&#10095;</button>    
   </div>
   <div class="score-display">
-    <label for="scoreSelector">Score:</label>
+    <label for="scoreSelector">Puntos</label>
     <input
     class="score-input"
       id="scoreSelector"

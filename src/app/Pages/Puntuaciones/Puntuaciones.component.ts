@@ -24,9 +24,9 @@ export class PuntuacionesComponent implements OnInit {
   }
 
   Casas = [
-    { name: 'Gryffindor', score: 0, logo: '../../../assets/Img/Casas/IA-1.png', background: 'url(../../../assets/Img/Casas/BanderinGryffindor.png)' },
-    { name: 'Slytherin', score: 0, logo: '../../../assets/Img/Casas/Ravenclaw.png',background: 'url(../../../assets/Img/Casas/BanderinRavenclaw.jpg)' },
     { name: 'Hufflepuff', score: 0, logo: '../../../assets/Img/Casas/HafflePuff.png',  background: 'url(../../../assets/Img/Casas/BanderinHufflepuff.png)' },
+    { name: 'Gryffindor', score: 0, logo: '../../../assets/Img/Casas/IA-1.png', background: 'url(../../../assets/Img/Casas/BanderinGryffindor.png)' },
+    { name: 'Slytherin', score: 0, logo: '../../../assets/Img/Casas/Ravenclaw.png',background: 'url(../../../assets/Img/Casas/BanderinRavenclaw.png)' },
     { name: 'Ravenclaw', score: 0, logo: '../../../assets/Img/Casas/Slytherin.png', background: 'url(../../../assets/Img/Casas/BanderinSlytherin.png)' }
   ]
   puntos: number = 10;

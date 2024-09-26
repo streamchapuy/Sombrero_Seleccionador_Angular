@@ -9,6 +9,7 @@ import { SombreroComponent } from './Components/sombrero/sombrero.component';
 import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
 import { PuntuacionesComponent } from './Pages/Puntuaciones/Puntuaciones.component';
 import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
