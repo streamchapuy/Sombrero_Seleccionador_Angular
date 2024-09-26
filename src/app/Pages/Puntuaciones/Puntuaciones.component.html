@@ -1,11 +1,31 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-  <div  class="container">
-    <div class="banderin"><img src="../../../assets/Img/Casas/Banderin Gryffindor.png" alt="Gryffindor"></div>
-    <div class="banderin"><img src="../../../assets/Img/Casas/Banderin Hufflepuff.png" alt="Hufflepuff"></div>
-    <div class="banderin"><img src="../../../assets/Img/Casas/Banderin Ravenclaw.jpg" alt="Ravenclaw"></div>
-    <div class="banderin"><img src="../../../assets/Img/Casas/Banderin Slytherin.png" alt="Slytherin"></div>
+<div class="container">
+  <div class="banner" *ngFor="let casa of Casas; let i = index" [ngStyle]="{'background-image': casa.background}">
+    <img [src]="casa.logo" [alt]="casa.name" class="casa-logo">
+    <div class="score">{{ casa.score }}</div>
   </div>
+  <div class="selector-score">
+    <button class="nav-arrow left-arrow" (click)="EquipoAnterior()">&#10094;</button>
+    <div *ngIf="selectedTeamIndex !== undefined">
+      <img [src]="Casas[selectedTeamIndex].logo" [alt]="Casas[selectedTeamIndex].name" class="casa-logo">
+    </div>
+    <button class="nav-arrow right-arrow" (click)="EquipoSiguiente()">&#10095;</button>    
+  </div>
+  <div class="score-display">
+    <label for="scoreSelector">Score:</label>
+    <input
+    class="score-input"
+      id="scoreSelector"
+      type="number"
+      [(ngModel)]="Casas[selectedTeamIndex].score"      
+      min="0"
+      step="1">
+  </div>
+  
+</div>
+
+  
   <div id="Volumen">
     <span class="material-symbols-outlined" (click)="playSound()">
         volume_mute

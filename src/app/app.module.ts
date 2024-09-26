@@ -7,6 +7,8 @@ import { SorteoComponent } from './Pages/sorteo/sorteo.component';
 import { RuletaComponent } from './Components/ruleta/ruleta.component';
 import { SombreroComponent } from './Components/sombrero/sombrero.component';
 import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
+import { PuntuacionesComponent } from './Pages/Puntuaciones/Puntuaciones.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,11 +17,13 @@ import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
     SorteoComponent,
     RuletaComponent,
     SombreroComponent,
-    NavBarComponent
+    NavBarComponent,
+    PuntuacionesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
